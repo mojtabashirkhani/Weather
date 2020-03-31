@@ -58,7 +58,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.slimshady.weatherplusmap"
+        applicationId "com.slimshady.weather"
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
