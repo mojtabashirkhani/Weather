@@ -1,7 +1,8 @@
-package com.faskn.app.weatherapp.domain.datasource.currentWeather
+package com.slimshady.weather.data.remote.datasource.currentWeather
 
-import com.faskn.app.weatherapp.domain.WeatherAppAPI
-import com.faskn.app.weatherapp.domain.model.CurrentWeatherResponse
+
+import com.slimshady.weather.data.remote.WeatherApi
+import com.slimshady.weather.data.remote.model.CurrentWeatherResponse
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -9,7 +10,7 @@ import javax.inject.Inject
  * Created by Furkan on 2019-10-24
  */
 
-class CurrentWeatherRemoteDataSource @Inject constructor(private val api: WeatherAppAPI) {
+class CurrentWeatherRemoteDataSource @Inject constructor(private val api: WeatherApi) {
 
     fun getCurrentWeatherByGeoCords(lat: Double, lon: Double, units: String): Single<CurrentWeatherResponse> = api.getCurrentByGeoCords(lat, lon, units)
 }

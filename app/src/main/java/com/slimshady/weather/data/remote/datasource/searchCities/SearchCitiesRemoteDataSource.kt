@@ -1,8 +1,8 @@
-package com.faskn.app.weatherapp.domain.datasource.searchCities
+package com.slimshady.weather.data.remote.datasource.searchCities
 
 import com.algolia.search.saas.places.PlacesClient
 import com.algolia.search.saas.places.PlacesQuery
-import com.faskn.app.weatherapp.domain.model.SearchResponse
+import com.slimshady.weather.data.remote.model.SearchResponse
 import com.slimshady.weather.util.extensions.tryCatch
 import com.squareup.moshi.Moshi
 import io.reactivex.Single

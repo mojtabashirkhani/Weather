@@ -2,7 +2,7 @@ package com.slimshady.weather.repo
 
 import android.os.Build
 import androidx.lifecycle.LiveData
-import com.faskn.app.weatherapp.domain.datasource.searchCities.SearchCitiesRemoteDataSource
+import com.slimshady.weather.data.remote.datasource.searchCities.SearchCitiesRemoteDataSource
 import com.slimshady.weather.core.Constants.NetworkService.RATE_LIMITER_TYPE
 import com.slimshady.weather.data.local.db.model.CitiesForSearchEntity
 import com.slimshady.weather.data.remote.datasource.searchCities.SearchCitiesLocalDataSource

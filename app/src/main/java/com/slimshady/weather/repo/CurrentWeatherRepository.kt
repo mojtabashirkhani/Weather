@@ -2,7 +2,7 @@ package com.slimshady.weather.repo
 
 import android.os.Build
 import androidx.lifecycle.LiveData
-import com.faskn.app.weatherapp.domain.datasource.currentWeather.CurrentWeatherRemoteDataSource
+import com.slimshady.weather.data.remote.datasource.currentWeather.CurrentWeatherRemoteDataSource
 import com.slimshady.weather.core.Constants.NetworkService.RATE_LIMITER_TYPE
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.data.remote.datasource.currentWeather.CurrentWeatherLocalDataSource
