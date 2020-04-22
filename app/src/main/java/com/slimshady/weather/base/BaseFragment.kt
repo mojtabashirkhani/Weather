@@ -12,11 +12,12 @@ import androidx.annotation.NonNull
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
 
 
-abstract class BaseFragment<T: ViewDataBinding, V: ViewModel> : DaggerFragment() {
+abstract class BaseFragment<T: ViewDataBinding, V: ViewModel>(@LayoutRes val layout: Int) : DaggerFragment() {
 
     private lateinit var mViewDataBinding: T
     private var mViewModel: V? = null
@@ -25,8 +26,6 @@ abstract class BaseFragment<T: ViewDataBinding, V: ViewModel> : DaggerFragment()
 
     abstract fun getBindingVariable(): Int
 
-    @LayoutRes
-    abstract fun getLayoutId(): Int
 
     abstract fun getViewModel(): V
 
@@ -49,7 +48,7 @@ abstract class BaseFragment<T: ViewDataBinding, V: ViewModel> : DaggerFragment()
         savedInstanceState: Bundle?
     ): View? {
 
-        mViewDataBinding = inflate(inflater, getLayoutId(), container, false)
+        mViewDataBinding = inflate(inflater, layout, container, false)
 
         return  mViewDataBinding.root
     }
@@ -118,6 +117,12 @@ abstract class BaseFragment<T: ViewDataBinding, V: ViewModel> : DaggerFragment()
 
         } else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        }
+    }
+
+    open fun navigate(action: Int) {
+        view?.let { _view ->
+            Navigation.findNavController(_view).navigate(action)
         }
     }
 
