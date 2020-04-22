@@ -12,30 +12,36 @@ import androidx.annotation.NonNull
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
 
-abstract class BaseFragment<T: ViewDataBinding, V: ViewModel>(@LayoutRes val layout: Int) : DaggerFragment() {
+abstract class BaseFragment<T: ViewDataBinding, V: ViewModel>(@LayoutRes val layout: Int, viewModelClass: Class<V>) : DaggerFragment() {
+
+    @Inject
+    internal lateinit var viewModelProviderFactory: ViewModelProvider.Factory
 
     private lateinit var mViewDataBinding: T
-    private var mViewModel: V? = null
     private lateinit var permissionCallback: (Array<BasePermissionModel>) -> Unit
 
 
     abstract fun getBindingVariable(): Int
 
 
-    abstract fun getViewModel(): V
-
     abstract fun initViews()
+
+    private val mViewModel by lazy {
+       viewModelProviderFactory.let { ViewModelProvider(this, it).get(viewModelClass) }
+    }
 
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
 
         super.onAttach(context)
-        mViewModel = getViewModel()
+//        mViewModel = getViewModel()
 
     }
 
@@ -55,7 +61,7 @@ abstract class BaseFragment<T: ViewDataBinding, V: ViewModel>(@LayoutRes val lay
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        this.mViewModel = if (mViewModel == null) getViewModel() else mViewModel
+//        this.mViewModel = if (mViewModel == null) getViewModel() else mViewModel
         mViewDataBinding.setVariable(getBindingVariable(), mViewModel)
         mViewDataBinding.lifecycleOwner = this
         mViewDataBinding.executePendingBindings()
