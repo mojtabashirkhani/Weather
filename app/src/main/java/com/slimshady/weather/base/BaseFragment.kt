@@ -19,7 +19,7 @@ import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
 
-abstract class BaseFragment<T: ViewDataBinding, V: ViewModel>(@LayoutRes val layout: Int, viewModelClass: Class<V>) : DaggerFragment() {
+abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val layout: Int, viewModelClass: Class<V>) : DaggerFragment() {
 
     @Inject
     internal lateinit var viewModelProviderFactory: ViewModelProvider.Factory

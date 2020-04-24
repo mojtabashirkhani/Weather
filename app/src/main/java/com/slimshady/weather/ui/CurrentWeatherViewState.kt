@@ -1,6 +1,6 @@
 package com.slimshady.weather.ui
 
-import com.faskn.app.weatherapp.core.BaseViewState
+import com.slimshady.weather.base.BaseViewState
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.util.domain.Status
 

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import com.slimshady.weather.data.local.db.model.CitiesForSearchEntity
 import com.slimshady.weather.repo.SearchCitiesRepository
-import com.slimshady.weather.ui.SearchViewState
+import com.slimshady.weather.ui.search.SearchViewState
 import com.slimshady.weather.util.UseCaseLiveData
 import com.slimshady.weather.util.domain.Resource
 import javax.inject.Inject

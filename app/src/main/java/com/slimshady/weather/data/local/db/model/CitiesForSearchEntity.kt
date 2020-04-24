@@ -4,6 +4,10 @@ import android.os.Parcelable
 import android.text.SpannableString
 import androidx.room.*
 import com.slimshady.weather.data.remote.model.HitsItem
+import com.slimshady.weather.util.extensions.bold
+import com.slimshady.weather.util.extensions.italic
+import com.slimshady.weather.util.extensions.plus
+import com.slimshady.weather.util.extensions.spannable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -36,12 +40,12 @@ data class CitiesForSearchEntity(
         id = hitsItem?.objectID.toString()
     )
 
-    /*fun getFullName(): SpannableString {
+    fun getFullName(): SpannableString {
         return spannable {
             bold(name ?: "").plus(", ") +
                 bold(county ?: "").plus(", ") +
                 italic(administrative ?: "").plus(", ") +
                 italic(country ?: "")
         }
-    }*/
+    }
 }

@@ -1,4 +1,4 @@
-package com.faskn.app.weatherapp.core
+package com.slimshady.weather.base
 
 import com.slimshady.weather.util.domain.Status
 
