@@ -11,6 +11,7 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.NonNull
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.databinding.ViewDataBinding
+import androidx.databinding.library.baseAdapters.BR
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -24,11 +25,8 @@ abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val lay
     @Inject
     internal lateinit var viewModelProviderFactory: ViewModelProvider.Factory
 
-    private lateinit var mViewDataBinding: T
+    lateinit var mViewDataBinding: T
     private lateinit var permissionCallback: (Array<BasePermissionModel>) -> Unit
-
-
-    abstract fun getBindingVariable(): Int
 
 
     abstract fun initViews()
@@ -62,7 +60,7 @@ abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val lay
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        this.mViewModel = if (mViewModel == null) getViewModel() else mViewModel
-        mViewDataBinding.setVariable(getBindingVariable(), mViewModel)
+        mViewDataBinding.setVariable(BR.viewModel, mViewModel)
         mViewDataBinding.lifecycleOwner = this
         mViewDataBinding.executePendingBindings()
 

@@ -1,7 +1,6 @@
 package com.slimshady.weather.di.module
 
 import android.os.Environment
-import com.algolia.search.saas.places.PlacesClient
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.slimshady.weather.core.Constants
 import com.slimshady.weather.data.remote.DefaultRequestInterceptor
@@ -71,9 +70,5 @@ class NetworkModule {
             .create(WeatherApi::class.java)
     }
 
-    @Provides
-    @Singleton
-    fun providePlacesClient(): PlacesClient {
-        return PlacesClient(Constants.AlgoliaKeys.APPLICATION_ID, Constants.AlgoliaKeys.SEARCH_API_KEY)
-    }
+
 }

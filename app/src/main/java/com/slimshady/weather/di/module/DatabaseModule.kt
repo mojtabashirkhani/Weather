@@ -4,6 +4,8 @@ import android.app.Application
 import androidx.room.Room
 import com.slimshady.weather.data.local.db.AppDatabase
 import com.slimshady.weather.data.local.db.AppDatabase.Companion.DB_NAME
+import com.slimshady.weather.data.local.db.dao.CurrentWeatherDao
+import com.slimshady.weather.data.local.db.dao.ForecastDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -20,15 +22,17 @@ class DatabaseModule {
             .build()
     }
 
-   /* @Provides
-    fun provideTimetableDao(database: AppDatabase): TimetableDao {
-        return database.timetableDao()
+    @Singleton
+    @Provides
+    fun provideForecastDao(db: AppDatabase): ForecastDao {
+        return db.forecastDao()
     }
 
+    @Singleton
     @Provides
-    fun provideTimetableRepository(database: AppDatabase): TimetableRepository {
-        return TimetableRepositoryImpl(database)
+    fun provideCurrentWeatherDao(db: AppDatabase): CurrentWeatherDao {
+        return db.currentWeatherDao()
     }
-*/
+
 
 }

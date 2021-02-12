@@ -1,31 +1,60 @@
 package com.slimshady.weather.ui.home
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import android.annotation.SuppressLint
+import android.util.Log
+import com.slimshady.weather.MainActivity
 import com.slimshady.weather.R
+import com.slimshady.weather.base.BaseFragment
+import com.slimshady.weather.core.Constants
+import com.slimshady.weather.data.remote.usecase.CurrentWeatherUseCase
+import com.slimshady.weather.data.remote.usecase.ForecastUseCase
+import com.slimshady.weather.databinding.FragmentHomeBinding
+import com.slimshady.weather.util.extensions.isNetworkAvailable
+import com.slimshady.weather.util.extensions.observeWith
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
+    R.layout.fragment_home,
+    HomeViewModel::class.java
+) {
 
-    private lateinit var homeViewModel: HomeViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
-        return root
+    @SuppressLint("LogNotTimber")
+    override fun initViews() {
+        mViewDataBinding.viewModel?.setCurrentWeatherParams(
+            CurrentWeatherUseCase.CurrentWeatherParams(
+                "40.7127",
+                "-74.006",
+                isNetworkAvailable(requireContext()),
+                Constants.Coords.METRIC
+            )
+        )
+
+        mViewDataBinding.viewModel?.setForecastParams(
+            ForecastUseCase.ForecastParams(
+                "40.7127",
+                "-74.006",
+                isNetworkAvailable(requireContext()),
+                Constants.Coords.METRIC
+            )
+        )
+
+        mViewDataBinding.viewModel?.getForecastViewState()?.observeWith(
+            viewLifecycleOwner
+        ) {
+            with(mViewDataBinding) {
+                Log.d("forecast_weather", it.data?.list.toString())
+
+            }
+        }
+
+        mViewDataBinding.viewModel?.getCurrentWeatherViewState()?.observeWith(
+            viewLifecycleOwner
+        ) {
+            with(mViewDataBinding) {
+                Log.d("current_weather", it.data.toString())
+            }
+        }
     }
+
+
 }

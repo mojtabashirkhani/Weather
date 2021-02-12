@@ -3,7 +3,6 @@ package com.slimshady.weather.data.local.db.model
 import android.os.Parcelable
 import androidx.room.*
 
-import com.slimshady.weather.data.local.db.model.CityEntity
 import com.slimshady.weather.data.remote.model.ForecastResponse
 import com.slimshady.weather.data.remote.model.ListItem
 import kotlinx.android.parcel.Parcelize
@@ -20,8 +19,8 @@ data class ForecastEntity(
     @ColumnInfo(name = "id")
     var id: Int,
 
-    @Embedded
-    var city: CityEntity?,
+   /* @Embedded
+    var city: CityEntity?,*/
 
     @ColumnInfo(name = "list")
     var list: List<ListItem>?
@@ -30,7 +29,6 @@ data class ForecastEntity(
     @Ignore
     constructor(forecastResponse: ForecastResponse) : this(
         id = 0,
-        city = forecastResponse.city?.let { CityEntity(it) },
         list = forecastResponse.list
     )
 }

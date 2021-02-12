@@ -13,8 +13,12 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import com.slimshady.weather.base.BaseActivity
+import dagger.android.DaggerActivity
+import dagger.android.support.DaggerAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 

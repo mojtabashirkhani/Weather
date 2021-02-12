@@ -27,4 +27,14 @@ interface WeatherApi {
         @Query("units")
         units: String
     ): Single<CurrentWeatherResponse>
+
+    @GET("weather")
+    fun getWeatherByCityName(
+        @Query("q")
+        cityName: String,
+        @Query("units")
+        units: String,
+        @Query("appid")
+        apiKey: String
+    ): Single<CurrentWeatherResponse>
 }

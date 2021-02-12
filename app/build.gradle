@@ -38,10 +38,13 @@ android {
                 }
             }
 
-    compileSdkVersion 29
 
-    dataBinding {
-        enabled = true
+    compileSdkVersion 30
+
+    buildFeatures {
+
+        dataBinding = true
+        viewBinding = true
     }
 
     compileOptions {
@@ -60,7 +63,7 @@ android {
     defaultConfig {
         applicationId "com.slimshady.weather"
         minSdkVersion 17
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -88,7 +91,7 @@ dependencies {
     def dagger = "2.20"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     implementation "androidx.appcompat:appcompat:$androidx_core"
     implementation "androidx.core:core-ktx:$androidx_core"
@@ -103,11 +106,12 @@ dependencies {
 
 
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    kapt           "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version" // For Kotlin use lifecycle-reactivestreams-ktx
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+    // For Kotlin use lifecycle-reactivestreams-ktx
     testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
     implementation "androidx.navigation:navigation-fragment:$lifecycle_version"
     implementation "androidx.navigation:navigation-ui:$lifecycle_version"
@@ -120,9 +124,9 @@ dependencies {
     implementation 'android.arch.work:work-runtime:1.0.1'
 
 
-
     implementation "com.google.dagger:dagger-android:$dagger"
-    implementation "com.google.dagger:dagger-android-support:$dagger" // if you use the support libraries
+    implementation "com.google.dagger:dagger-android-support:$dagger"
+    // if you use the support libraries
     kapt "com.google.dagger:dagger-android-processor:$dagger"
     kapt "com.google.dagger:dagger-compiler:$dagger"
 
@@ -130,9 +134,9 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"
-    
+
     implementation "com.github.bumptech.glide:glide:$glide"
-    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
 
 
     implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
@@ -170,7 +174,6 @@ dependencies {
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
-    implementation 'com.algolia:algoliasearch-android:3.+'
 
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
 

@@ -2,12 +2,10 @@ package com.slimshady.weather.core
 
 
 import android.content.Context
+import androidx.multidex.MultiDex
+import com.slimshady.weather.di.component.DaggerCoreComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
-import androidx.multidex.MultiDex
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import com.slimshady.weather.di.component.DaggerCoreComponent
 
 
 class App : DaggerApplication() {
