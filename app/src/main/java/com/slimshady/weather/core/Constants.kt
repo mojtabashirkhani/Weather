@@ -3,10 +3,12 @@ package com.slimshady.weather.core
 object Constants {
 
     object NetworkService {
-        const val BASE_URL = "http://api.openweathermap.org/data/2.5/"
-        const val API_KEY_VALUE = "751d80f6c314139192ffcb62c107e654"
+        const val BASE_URL_WEATHER = "http://api.openweathermap.org/data/2.5/"
+        const val API_KEY_WEATHER = "751d80f6c314139192ffcb62c107e654"
         const val RATE_LIMITER_TYPE = "data"
-        const val API_KEY_QUERY = "appid"
+        const val API_KEY_QUERY_WEATHER = "appid"
+        const val API_KEY_MAP = "AIzaSyBmuETnmGItitpoewCXGkv--oOioZj_Fmo"
+        const val API_KEY_OAUTH = "667369541308-hmjgu7l2k3gis3k5ms88i7apflh4u6c5.apps.googleusercontent.com"
     }
 
     object AlgoliaKeys {
