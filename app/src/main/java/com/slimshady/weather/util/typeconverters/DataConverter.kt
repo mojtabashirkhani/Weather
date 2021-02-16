@@ -1,8 +1,8 @@
 package com.slimshady.weather.util.typeconverters
 
 import androidx.room.TypeConverter
-import com.slimshady.weather.data.remote.model.ListItem
-import com.slimshady.weather.data.remote.model.WeatherItem
+import com.slimshady.weather.data.remote.model.weather.ListItem
+import com.slimshady.weather.data.remote.model.weather.WeatherItem
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 

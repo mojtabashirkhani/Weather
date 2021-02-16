@@ -2,7 +2,7 @@ package com.slimshady.weather.data.remote.datasource.currentWeather
 
 import com.slimshady.weather.data.local.db.dao.CurrentWeatherDao
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
-import com.slimshady.weather.data.remote.model.CurrentWeatherResponse
+import com.slimshady.weather.data.remote.model.weather.CurrentWeatherResponse
 import javax.inject.Inject
 
 /**

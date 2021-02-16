@@ -1,4 +1,4 @@
-package com.slimshady.weather.data.remote.model
+package com.slimshady.weather.data.remote.model.weather
 
 import android.graphics.Color
 import android.os.Parcelable

@@ -3,8 +3,8 @@ package com.slimshady.weather.data.local.db.model
 import android.os.Parcelable
 import androidx.room.*
 
-import com.slimshady.weather.data.remote.model.ForecastResponse
-import com.slimshady.weather.data.remote.model.ListItem
+import com.slimshady.weather.data.remote.model.weather.ForecastResponse
+import com.slimshady.weather.data.remote.model.weather.ListItem
 import kotlinx.android.parcel.Parcelize
 
 /**

@@ -1,17 +1,20 @@
-package com.slimshady.weather.data.remote.model
+package com.slimshady.weather.data.remote.model.weather
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class Country(
+data class Name(
 
     @Json(name = "matchLevel")
     val matchLevel: String? = null,
+
+    @Json(name = "fullyHighlighted")
+    val fullyHighlighted: Boolean? = null,
 
     @Json(name = "value")
     val value: String? = null,
 
     @Json(name = "matchedWords")
-    val matchedWords: List<Any?>? = null
+    val matchedWords: List<String?>? = null
 )

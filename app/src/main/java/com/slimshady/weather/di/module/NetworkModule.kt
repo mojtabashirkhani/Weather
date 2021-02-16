@@ -4,6 +4,7 @@ import android.os.Environment
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.slimshady.weather.core.Constants
 import com.slimshady.weather.data.remote.DefaultRequestInterceptor
+import com.slimshady.weather.data.remote.MapApi
 import com.slimshady.weather.data.remote.WeatherApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -64,11 +65,18 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideService(retrofit: Retrofit.Builder): WeatherApi {
+    fun provideWeatherService(retrofit: Retrofit.Builder): WeatherApi {
         return retrofit.baseUrl(Constants.NetworkService.BASE_URL_WEATHER)
             .build()
             .create(WeatherApi::class.java)
     }
 
+    @Provides
+    @Singleton
+    fun provideMapService(retrofit: Retrofit.Builder): MapApi {
+        return retrofit.baseUrl(Constants.NetworkService.BASE_URL_MAP)
+            .build()
+            .create(MapApi::class.java)
+    }
 
 }

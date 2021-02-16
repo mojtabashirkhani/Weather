@@ -6,7 +6,7 @@ import com.slimshady.weather.core.Constants.NetworkService.RATE_LIMITER_TYPE
 import com.slimshady.weather.data.local.db.model.ForecastEntity
 import com.slimshady.weather.data.remote.datasource.forecast.ForecastLocalDataSource
 import com.slimshady.weather.data.remote.datasource.forecast.ForecastRemoteDataSource
-import com.slimshady.weather.data.remote.model.ForecastResponse
+import com.slimshady.weather.data.remote.model.weather.ForecastResponse
 import com.slimshady.weather.util.domain.RateLimiter
 import com.slimshady.weather.util.domain.Resource
 import io.reactivex.Single

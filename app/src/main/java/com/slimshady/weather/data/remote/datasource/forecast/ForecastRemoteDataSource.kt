@@ -2,7 +2,7 @@ package com.slimshady.weather.data.remote.datasource.forecast
 
 
 import com.slimshady.weather.data.remote.WeatherApi
-import com.slimshady.weather.data.remote.model.ForecastResponse
+import com.slimshady.weather.data.remote.model.weather.ForecastResponse
 import io.reactivex.Single
 import javax.inject.Inject
 

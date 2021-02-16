@@ -1,7 +1,7 @@
 package  com.slimshady.weather.ui
 
 
-import com.slimshady.weather.data.remote.model.ListItem
+import com.slimshady.weather.data.remote.model.weather.ListItem
 import com.slimshady.weather.util.Mapper
 import javax.inject.Inject
 

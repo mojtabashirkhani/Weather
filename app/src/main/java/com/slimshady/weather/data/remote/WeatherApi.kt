@@ -1,7 +1,7 @@
 package com.slimshady.weather.data.remote
 
-import com.slimshady.weather.data.remote.model.CurrentWeatherResponse
-import com.slimshady.weather.data.remote.model.ForecastResponse
+import com.slimshady.weather.data.remote.model.weather.CurrentWeatherResponse
+import com.slimshady.weather.data.remote.model.weather.ForecastResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

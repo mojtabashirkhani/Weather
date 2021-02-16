@@ -1,4 +1,4 @@
-package com.slimshady.weather.data.remote.model
+package com.slimshady.weather.data.remote.model.weather
 
 import android.os.Parcelable
 import com.squareup.moshi.Json
@@ -7,11 +7,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @JsonClass(generateAdapter = true)
-data class Coord(
+data class Rain(
 
-    @Json(name = "lon")
-    val lon: Double?,
-
-    @Json(name = "lat")
-    val lat: Double?
+    @Json(name = "3h")
+    val jsonMember3h: Double?
 ) : Parcelable

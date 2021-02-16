@@ -1,4 +1,4 @@
-package com.slimshady.weather.data.remote.model
+package com.slimshady.weather.data.remote.model.weather
 
 import android.os.Parcelable
 import com.squareup.moshi.Json
@@ -7,11 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @JsonClass(generateAdapter = true)
-data class Wind(
-
-    @Json(name = "deg")
-    val deg: Double?,
-
-    @Json(name = "speed")
-    val speed: Double?
+data class Clouds(
+    @Json(name = "all")
+    val all: Int?
 ) : Parcelable

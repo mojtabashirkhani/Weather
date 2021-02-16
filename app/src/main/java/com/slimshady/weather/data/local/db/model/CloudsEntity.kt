@@ -4,7 +4,7 @@ import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Ignore
-import com.slimshady.weather.data.remote.model.Clouds
+import com.slimshady.weather.data.remote.model.weather.Clouds
 import kotlinx.android.parcel.Parcelize
 
 /**

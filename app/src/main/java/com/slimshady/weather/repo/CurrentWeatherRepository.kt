@@ -6,7 +6,7 @@ import com.slimshady.weather.data.remote.datasource.currentWeather.CurrentWeathe
 import com.slimshady.weather.core.Constants.NetworkService.RATE_LIMITER_TYPE
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.data.remote.datasource.currentWeather.CurrentWeatherLocalDataSource
-import com.slimshady.weather.data.remote.model.CurrentWeatherResponse
+import com.slimshady.weather.data.remote.model.weather.CurrentWeatherResponse
 import com.slimshady.weather.util.domain.RateLimiter
 import com.slimshady.weather.util.domain.Resource
 import io.reactivex.Single

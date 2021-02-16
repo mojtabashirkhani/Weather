@@ -1,4 +1,4 @@
-package com.slimshady.weather.data.remote.model
+package com.slimshady.weather.data.remote.model.weather
 
 import android.os.Parcelable
 import com.squareup.moshi.Json
@@ -7,8 +7,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @JsonClass(generateAdapter = true)
-data class Sys(
+data class Snow(
 
-    @Json(name = "pod")
-    val pod: String?
+    @Json(name = "3h")
+    val jsonMember3h: Double?
 ) : Parcelable
