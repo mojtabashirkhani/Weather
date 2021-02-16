@@ -1,80 +1,78 @@
 package com.slimshady.weather.data.remote.model.place_details
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
-import javax.annotation.Generated
 
 /** @author @buren ---> {Google response for place details}*/
 @Parcelize
-@Generated("com.robohorse.robopojogenerator")
 data class PlaceDetails (
 
-    @field:SerializedName("utc_offset")
+    @Json(name = "utc_offset")
     var utcOffset: Int? = null,
 
-    @field:SerializedName("formatted_address")
+    @Json(name = "formatted_address")
     var formattedAddress: String? = null,
 
-    @field:SerializedName("types")
+    @Json(name = "types")
     var types: List<String?>? = null,
 
-    @field:SerializedName("website")
+    @Json(name = "website")
     var website: String? = null,
 
-    @field:SerializedName("icon")
+    @Json(name = "icon")
     var icon: String? = null,
 
-    @field:SerializedName("rating")
+    @Json(name = "rating")
     var rating: Double? = null,
 
-    @field:SerializedName("address_components")
+    @Json(name = "address_components")
     var addressComponents: List<AddressComponentsItem?>? = null,
 
-    @field:SerializedName("photos")
+    @Json(name = "photos")
     var photos: List<PhotosItem?>? = null,
 
-    @field:SerializedName("url")
+    @Json(name = "url")
     var url: String? = null,
 
-    @field:SerializedName("reference")
+    @Json(name = "reference")
     var reference: String? = null,
 
-    @field:SerializedName("user_ratings_total")
+    @Json(name = "user_ratings_total")
     var userRatingsTotal: Int? = null,
 
-    @field:SerializedName("reviews")
+    @Json(name = "reviews")
     var reviews: List<ReviewsItem?>? = null,
 
-    @field:SerializedName("scope")
+    @Json(name = "scope")
     var scope: String? = null,
 
-    @field:SerializedName("name")
+    @Json(name = "name")
     var name: String? = null,
 
-    @field:SerializedName("opening_hours")
+    @Json(name = "opening_hours")
     var openingHours: OpeningHours? = null,
 
-    @field:SerializedName("geometry")
+    @Json(name = "geometry")
     var geometry: Geometry? = null,
 
-    @field:SerializedName("vicinity")
+    @Json(name = "vicinity")
     var vicinity: String? = null,
 
-    @field:SerializedName("id")
+    @Json(name = "id")
     var id: String? = null,
 
-    @field:SerializedName("adr_address")
+    @Json(name = "adr_address")
     var adrAddress: String? = null,
 
-    @field:SerializedName("plus_code")
+    @Json(name = "plus_code")
     var plusCode: PlusCode? = null,
 
-    @field:SerializedName("formatted_phone_number")
+    @Json(name = "formatted_phone_number")
     var formattedPhoneNumber: String? = null,
 
-    @field:SerializedName("international_phone_number")
+    @Json(name = "international_phone_number")
     var internationalPhoneNumber: String? = null,
 
-    @field:SerializedName("place_id")
+    @Json(name = "place_id")
     var placeId: String? = null
 ) : Parcelable

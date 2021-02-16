@@ -1,13 +1,13 @@
 package com.slimshady.weather.data.remote.model.places_response
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 /** @author @buren ---> {Google response for predicted places}*/
 data class TermsItem(
 
-	@field:SerializedName("offset")
+	@Json(name = "offset")
 	val offset: Int? = null,
 
-	@field:SerializedName("value")
+	@Json(name = "value")
 	val value: String? = null
 )

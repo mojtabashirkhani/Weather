@@ -1,17 +1,15 @@
 package com.slimshady.weather.data.remote.model.place_details
-import com.google.gson.annotations.SerializedName
-import javax.annotation.Generated
+import com.squareup.moshi.Json
 
 /** @author @buren ---> {Google response for place details}*/
-@Generated("com.robohorse.robopojogenerator")
 data class PlacesDetailsResponse(
 
-    @field:SerializedName("result")
+    @Json(name = "result")
     var result: PlaceDetails? = null,
 
-    @field:SerializedName("html_attributions")
+    @Json(name = "html_attributions")
     var htmlAttributions: List<Any?>? = null,
 
-    @field:SerializedName("status")
+    @Json(name = "status")
     var status: String? = null
 )

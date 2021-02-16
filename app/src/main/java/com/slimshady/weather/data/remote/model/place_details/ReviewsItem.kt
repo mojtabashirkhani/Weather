@@ -1,39 +1,37 @@
 package com.slimshady.weather.data.remote.model.place_details
 import android.os.Parcelable
 import androidx.room.Entity
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
-import javax.annotation.Generated
 
 /** @author @buren ---> {Google response for place details}*/
 
 @Entity(tableName = "ReviewsItem")
 @Parcelize
-@Generated("com.robohorse.robopojogenerator")
 data class ReviewsItem(
 
-    @field:SerializedName("author_name")
+    @Json(name = "author_name")
     var authorName: String? = null,
 
-    @field:SerializedName("profile_photo_url")
+    @Json(name = "profile_photo_url")
     var profilePhotoUrl: String? = null,
 
-    @field:SerializedName("author_url")
+    @Json(name = "author_url")
     var authorUrl: String? = null,
 
-    @field:SerializedName("rating")
+    @Json(name = "rating")
     var rating: Int? = null,
 
-    @field:SerializedName("language")
+    @Json(name = "language")
     var language: String? = null,
 
-    @field:SerializedName("text")
+    @Json(name = "text")
     var text: String? = null,
 
-    @field:SerializedName("time")
+    @Json(name = "time")
     var time: Int? = null,
 
-    @field:SerializedName("relative_time_description")
+    @Json(name = "relative_time_description")
     var relativeTimeDescription: String? = null
 
 ) : Parcelable

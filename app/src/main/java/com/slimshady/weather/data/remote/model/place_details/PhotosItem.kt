@@ -1,24 +1,22 @@
 package com.slimshady.weather.data.remote.model.place_details
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
-import javax.annotation.Generated
 
 /** @author @buren ---> {Google response for place details}*/
 @Parcelize
-@Generated("com.robohorse.robopojogenerator")
 data class PhotosItem(
 
-    @field:SerializedName("photo_reference")
+    @Json(name = "photo_reference")
     var photoReference: String? = null,
 
-    @field:SerializedName("width")
+    @Json(name = "width")
     var width: Int? = null,
 
-    @field:SerializedName("html_attributions")
+    @Json(name = "html_attributions")
     var htmlAttributions: List<String?>? = null,
 
-    @field:SerializedName("height")
+    @Json(name = "height")
     var height: Int? = null
 
 ) : Parcelable

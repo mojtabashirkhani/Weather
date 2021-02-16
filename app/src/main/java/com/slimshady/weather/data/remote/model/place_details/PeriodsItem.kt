@@ -1,17 +1,15 @@
 package com.slimshady.weather.data.remote.model.place_details
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
-import javax.annotation.Generated
 
 /** @author @buren ---> {Google response for place details}*/
 @Parcelize
-@Generated("com.robohorse.robopojogenerator")
 data class PeriodsItem(
 
-    @field:SerializedName("close")
+    @Json(name = "close")
     var close: Close? = null,
 
-    @field:SerializedName("open")
+    @Json(name = "open")
     var open: Open? = null
 ) : Parcelable
