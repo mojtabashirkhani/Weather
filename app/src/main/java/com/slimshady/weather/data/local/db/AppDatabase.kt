@@ -9,13 +9,13 @@ import com.slimshady.weather.data.local.db.dao.ForecastDao
 import com.slimshady.weather.data.local.db.dao.RecentSearchesDAO
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.data.local.db.model.ForecastEntity
-import com.slimshady.weather.data.local.db.model.SearchSelectedItem
+import com.slimshady.weather.data.local.db.model.SearchEntity
 import com.slimshady.weather.util.typeconverters.DataConverter
 
 @Database(
     entities = [ForecastEntity::class,
         CurrentWeatherEntity::class,
-               SearchSelectedItem::class],
+               SearchEntity::class],
     version = VERSION,
     exportSchema = false
 )

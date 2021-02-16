@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 @Entity(tableName = "SearchSelectedItem")
-data class SearchSelectedItem(
+data class SearchEntity(
     @PrimaryKey var placeId: String,
     var mainText: String,
     var secondaryText: String,
