@@ -11,6 +11,7 @@ import com.slimshady.weather.data.remote.usecase.ForecastUseCase
 import com.slimshady.weather.databinding.FragmentHomeBinding
 import com.slimshady.weather.util.extensions.isNetworkAvailable
 import com.slimshady.weather.util.extensions.observeWith
+import kotlinx.android.synthetic.main.app_bar_main.view.*
 
 class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     R.layout.fragment_home,
@@ -41,19 +42,15 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
         mViewDataBinding.viewModel?.getForecastViewState()?.observeWith(
             viewLifecycleOwner
         ) {
-            with(mViewDataBinding) {
-                Log.d("forecast_weather", it.data?.list.toString())
-
-            }
+            Log.d("forecast_weather", it.data?.list.toString())
         }
 
         mViewDataBinding.viewModel?.getCurrentWeatherViewState()?.observeWith(
             viewLifecycleOwner
         ) {
-            with(mViewDataBinding) {
-                Log.d("current_weather", it.data.toString())
-            }
+            Log.d("current_weather", it.data.toString())
         }
+        
     }
 
 

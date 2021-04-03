@@ -22,4 +22,6 @@ class App : DaggerApplication() {
         super.attachBaseContext(context)
         MultiDex.install(this)
     }
+
+
 }

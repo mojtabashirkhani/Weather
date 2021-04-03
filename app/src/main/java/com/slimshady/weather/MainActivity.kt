@@ -14,7 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import com.google.android.libraries.places.api.Places
 import com.slimshady.weather.base.BaseActivity
+import com.slimshady.weather.core.Constants.NetworkService.API_KEY_MAP
 import dagger.android.DaggerActivity
 import dagger.android.support.DaggerAppCompatActivity
 
@@ -23,10 +25,13 @@ class MainActivity : DaggerAppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Places.initialize(applicationContext, API_KEY_MAP)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->

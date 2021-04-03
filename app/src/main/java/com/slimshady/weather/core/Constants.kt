@@ -10,6 +10,8 @@ object Constants {
         const val API_KEY_QUERY_WEATHER = "appid"
         const val API_KEY_MAP = "AIzaSyBmuETnmGItitpoewCXGkv--oOioZj_Fmo"
         const val API_KEY_OAUTH = "667369541308-hmjgu7l2k3gis3k5ms88i7apflh4u6c5.apps.googleusercontent.com"
+        const val PLACE_AUTOCOMPLETE_RADIUS = "3500"
+
     }
 
     object AlgoliaKeys {

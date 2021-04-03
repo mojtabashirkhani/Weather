@@ -1,5 +1,6 @@
 package com.slimshady.weather.data.local.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -16,7 +17,7 @@ interface RecentSearchesDAO {
      *@author Burhan ud din ---> method used to get recent searches list
      */
     @Query("SELECT * FROM SearchSelectedItem ORDER BY searchCurrentMilliseconds DESC")
-    fun getRecentSearches(): List<SearchEntity>
+    fun getRecentSearches(): LiveData<SearchEntity>
 
     /**
      *@author Burhan ud din ---> method used to add item searched

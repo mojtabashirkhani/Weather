@@ -8,6 +8,7 @@ import retrofit2.http.Query
 
 interface MapApi {
 
+
     @GET("details/json")
     fun getPlaceDetailsFromPlaceId(
         @Query("placeid") placeId: String, @Query("key") apiKey: String
