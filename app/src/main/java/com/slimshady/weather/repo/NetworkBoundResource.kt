@@ -91,15 +91,15 @@ abstract class NetworkBoundResource<ResultType, RequestType>
     @WorkerThread
     protected abstract fun saveCallResult(item: RequestType)
 
-    @MainThread
+    @WorkerThread
     protected abstract fun shouldFetch(data: ResultType?): Boolean
 
-    @MainThread
+    @WorkerThread
     protected abstract fun loadFromDb(): LiveData<ResultType>
 
-    @MainThread
+    @WorkerThread
     protected abstract fun createCall(): Single<RequestType>
 
-    @MainThread
+    @WorkerThread
     protected abstract fun onFetchFailed()
 }

@@ -16,7 +16,7 @@ interface RecentSearchesDAO {
     /**
      *@author Burhan ud din ---> method used to get recent searches list
      */
-    @Query("SELECT * FROM SearchSelectedItem ORDER BY searchCurrentMilliseconds DESC")
+    @Query("SELECT * FROM SearchSelectedItem")
     fun getRecentSearches(): LiveData<SearchEntity>
 
     /**

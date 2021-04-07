@@ -17,8 +17,7 @@ class SearchViewModel @Inject constructor(private val searchUseCase: SearchUseCa
     }
 
     fun setSearchParams(params: SearchUseCase.SearchParams) {
-        if (_searchParams.value == params){
             _searchParams.postValue(params)
-        }
+
     }
 }

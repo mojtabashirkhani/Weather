@@ -1,6 +1,7 @@
 package com.slimshady.weather.util.typeconverters
 
 import androidx.room.TypeConverter
+import com.slimshady.weather.data.remote.model.places_response.PredictionsItem
 import com.slimshady.weather.data.remote.model.weather.ListItem
 import com.slimshady.weather.data.remote.model.weather.WeatherItem
 import com.squareup.moshi.Moshi
@@ -53,6 +54,28 @@ object DataConverter {
         val moshi = Moshi.Builder().build()
         val type = Types.newParameterizedType(List::class.java, WeatherItem::class.java)
         val adapter = moshi.adapter<List<WeatherItem>>(type)
+        return adapter.toJson(objects)
+    }
+
+    @TypeConverter
+    @JvmStatic
+    fun predictionsItemStringToList(data: String?): List<PredictionsItem>? {
+        if (data == null) {
+            return emptyList()
+        }
+
+        val moshi = Moshi.Builder().build()
+        val type = Types.newParameterizedType(List::class.java, PredictionsItem::class.java)
+        val adapter = moshi.adapter<List<PredictionsItem>>(type)
+        return adapter.fromJson(data)
+    }
+
+    @TypeConverter
+    @JvmStatic
+    fun predictionsItemListToString(objects: List<PredictionsItem>): String {
+        val moshi = Moshi.Builder().build()
+        val type = Types.newParameterizedType(List::class.java, PredictionsItem::class.java)
+        val adapter = moshi.adapter<List<PredictionsItem>>(type)
         return adapter.toJson(objects)
     }
 }

@@ -4,13 +4,26 @@ object Constants {
 
     object NetworkService {
         const val BASE_URL_WEATHER = "http://api.openweathermap.org/data/2.5/"
-        const val BASE_URL_MAP = "https://maps.googleapis.com/maps/api/place/"
+        const val BASE_URL_MAP = "https://maps.googleapis.com/"
         const val API_KEY_WEATHER = "751d80f6c314139192ffcb62c107e654"
         const val RATE_LIMITER_TYPE = "data"
         const val API_KEY_QUERY_WEATHER = "appid"
         const val API_KEY_MAP = "AIzaSyBmuETnmGItitpoewCXGkv--oOioZj_Fmo"
         const val API_KEY_OAUTH = "667369541308-hmjgu7l2k3gis3k5ms88i7apflh4u6c5.apps.googleusercontent.com"
         const val PLACE_AUTOCOMPLETE_RADIUS = "3500"
+        const val PLACE_AUTOCOMPLETE_COMPONENT = "country:pk"
+
+    }
+
+    object ApiRoutes {
+        const val GOOGLE_PLACE_AUTOCOMPLETE = "/maps/api/place/autocomplete/json"
+        const val GOOGLE_PLACE_DETAILS = "/maps/api/place/details/json"
+
+
+    }
+
+    object ApiFields {
+        const val HEADER_ACCEPT_ENCODING = "Accept-Encoding: identity"
 
     }
 

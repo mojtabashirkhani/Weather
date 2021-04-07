@@ -1,12 +1,11 @@
 package com.slimshady.weather.data.local.db.model
 
 import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
+import androidx.room.*
+import com.slimshady.weather.data.remote.model.places_response.PredictionsItem
 import com.slimshady.weather.data.remote.model.places_response.SearchResponse
-import com.slimshady.weather.data.remote.model.weather.ForecastResponse
 import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
 /**
  *@author Burhan ud din ---> item table
@@ -14,17 +13,19 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Entity(tableName = "SearchSelectedItem")
 data class SearchEntity(
-    @PrimaryKey var placeId: String,
-    var mainText: String,
-    var secondaryText: String,
-    var searchCurrentMilliseconds: Long
+    @PrimaryKey
+    @ColumnInfo(name = "id")
+    var id: Int,
+
+    @ColumnInfo(name = "predictions")
+    var predictionsItem: @RawValue List<PredictionsItem?>?
+
+
 ) : Parcelable {
     @Ignore
     constructor(searchResponse: SearchResponse) : this(
-        placeId = "0",
-        mainText = searchResponse.predictions?.get(0)?.structuredFormatting?.mainText.toString(),
-        secondaryText = searchResponse.predictions?.get(0)?.structuredFormatting?.secondaryText.toString(),
-        searchCurrentMilliseconds = System.currentTimeMillis()
+      id = 0,
+      predictionsItem = searchResponse.predictions
     )
 
 

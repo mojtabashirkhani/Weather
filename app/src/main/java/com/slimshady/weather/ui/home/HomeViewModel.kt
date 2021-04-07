@@ -1,15 +1,13 @@
 package com.slimshady.weather.ui.home
 
 import android.content.SharedPreferences
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.switchMap
+import androidx.lifecycle.*
 
 import com.slimshady.weather.data.remote.usecase.CurrentWeatherUseCase
 import com.slimshady.weather.data.remote.usecase.ForecastUseCase
 import com.slimshady.weather.ui.CurrentWeatherViewState
 import com.slimshady.weather.ui.ForecastViewState
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
@@ -26,6 +24,7 @@ class HomeViewModel @Inject internal constructor(
 
     fun getForecastViewState() = forecastViewState
     fun getCurrentWeatherViewState() = currentWeatherViewState
+
 
     private val forecastViewState: LiveData<ForecastViewState> =
         _forecastParams.switchMap { params ->

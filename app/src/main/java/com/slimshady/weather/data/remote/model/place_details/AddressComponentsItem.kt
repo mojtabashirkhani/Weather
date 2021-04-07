@@ -2,10 +2,12 @@ package com.slimshady.weather.data.remote.model.place_details
 import android.os.Parcelable
 import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 import kotlinx.android.parcel.Parcelize
 
 /** @author @buren ---> {Google response for place details}*/
 @Parcelize
+@JsonClass(generateAdapter = true)
 class AddressComponentsItem(
 
     @Json(name = "types")

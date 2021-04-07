@@ -3,13 +3,10 @@ package com.slimshady.weather.repo
 import android.os.Build
 import androidx.lifecycle.LiveData
 import com.slimshady.weather.core.Constants
-import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.data.local.db.model.SearchEntity
 import com.slimshady.weather.data.remote.datasource.search.SearchLocalDataSource
 import com.slimshady.weather.data.remote.datasource.search.SearchRemoteDataSource
 import com.slimshady.weather.data.remote.model.places_response.SearchResponse
-import com.slimshady.weather.data.remote.model.weather.CurrentWeatherResponse
-import com.slimshady.weather.ui.search.SearchViewState
 import com.slimshady.weather.util.domain.RateLimiter
 import com.slimshady.weather.util.domain.Resource
 import io.reactivex.Single
