@@ -2,12 +2,10 @@ package com.slimshady.weather.data.remote
 
 import com.slimshady.weather.core.Constants
 import com.slimshady.weather.core.Constants.NetworkService.API_KEY_MAP
-import com.slimshady.weather.core.Constants.NetworkService.PLACE_AUTOCOMPLETE_COMPONENT
 import com.slimshady.weather.core.Constants.NetworkService.PLACE_AUTOCOMPLETE_RADIUS
 import com.slimshady.weather.data.remote.model.place_details.PlacesDetailsResponse
 import com.slimshady.weather.data.remote.model.places_response.SearchResponse
 import io.reactivex.Single
-import org.apache.commons.lang3.StringUtils
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
