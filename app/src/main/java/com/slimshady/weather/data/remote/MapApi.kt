@@ -28,4 +28,9 @@ interface MapApi {
         @Query("key") googleMapApiKey: String = API_KEY_MAP
     ): Single<SearchResponse>
 
+
+data class Geom(
+    val coordinates: List<Double>,
+    val type: String
+)
 }
