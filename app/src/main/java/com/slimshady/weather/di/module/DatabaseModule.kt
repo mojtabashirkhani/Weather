@@ -7,13 +7,12 @@ import com.slimshady.weather.data.local.db.AppDatabase.Companion.DB_NAME
 import com.slimshady.weather.data.local.db.dao.CurrentWeatherDao
 import com.slimshady.weather.data.local.db.dao.ForecastDao
 import com.slimshady.weather.data.local.db.dao.MapDao
-import com.slimshady.weather.data.local.db.dao.RecentSearchesDAO
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class qDatabaseModule {
+class DatabaseModule {
 
     @Provides
     @Singleton
@@ -36,11 +35,6 @@ class qDatabaseModule {
         return db.currentWeatherDao()
     }
 
-    @Singleton
-    @Provides
-    fun provideRecentSearchDao(db: AppDatabase): RecentSearchesDAO {
-        return db.recentSearchDao()
-    }
 
     @Singleton
     @Provides

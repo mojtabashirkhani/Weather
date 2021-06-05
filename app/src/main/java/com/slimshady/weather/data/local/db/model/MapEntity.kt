@@ -10,15 +10,15 @@ import com.slimshady.weather.data.remote.model.places_response.Value
 import kotlinx.android.parcel.Parcelize
 import kotlinx.android.parcel.RawValue
 
-@Parcelize
 @Entity(tableName = "SearchMapIR")
 data class MapEntity(
 
     @PrimaryKey
     @ColumnInfo(name = "id")
-    var id: Int,
+    var id: Int
+)
 
-    @ColumnInfo(name = "value")
+   /* @ColumnInfo(name = "value")
     var value: @RawValue List<Value?>?
 
 
@@ -27,7 +27,7 @@ data class MapEntity(
     constructor(searchResponse: MapIR) : this(
         id = 0,
         value = searchResponse.value
-    )
-}
+    )*/
+
 
 

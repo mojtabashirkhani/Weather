@@ -13,11 +13,11 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
     @SuppressLint("LogNotTimber")
     override fun initViews() {
 
-        mViewDataBinding.viewModel?.setSearchParams(SearchUseCase.SearchParams("Tehran"))
+     /*   mViewDataBinding.viewModel?.setSearchParams(SearchUseCase.SearchParams("Tehran"))
 
         mViewDataBinding.viewModel?.getSearchViewState()?.observe(this){
             Log.d("search", it.data.toString())
 
-        }
+        }*/
     }
 }

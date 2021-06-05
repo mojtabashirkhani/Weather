@@ -13,7 +13,7 @@ import retrofit2.http.Query
 interface MapApi {
 
 
-    @Headers(Constants.ApiFields.HEADER_ACCEPT_ENCODING)
+  /*  @Headers(Constants.ApiFields.HEADER_ACCEPT_ENCODING)
     @GET(Constants.ApiRoutes.GOOGLE_PLACE_DETAILS)
     fun getPlaceDetailsFromPlaceId(
         @Query("place_id") placeId: String,
@@ -26,7 +26,7 @@ interface MapApi {
         @Query("input") input: String?,
         @Query("radius") radius: String = PLACE_AUTOCOMPLETE_RADIUS,
         @Query("key") googleMapApiKey: String = API_KEY_MAP
-    ): Single<SearchResponse>
+    ): Single<SearchResponse>*/
 
 
 data class Geom(
