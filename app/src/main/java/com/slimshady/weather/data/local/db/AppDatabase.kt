@@ -6,6 +6,7 @@ import androidx.room.TypeConverters
 import com.slimshady.weather.data.local.db.AppDatabase.Companion.VERSION
 import com.slimshady.weather.data.local.db.dao.CurrentWeatherDao
 import com.slimshady.weather.data.local.db.dao.ForecastDao
+import com.slimshady.weather.data.local.db.dao.MapDao
 import com.slimshady.weather.data.local.db.dao.RecentSearchesDAO
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.data.local.db.model.ForecastEntity
@@ -26,6 +27,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun forecastDao(): ForecastDao
     abstract fun currentWeatherDao(): CurrentWeatherDao
     abstract fun recentSearchDao(): RecentSearchesDAO
+    abstract fun mapDao(): MapDao
 
     companion object {
         const val DB_NAME = "weather.db"
