@@ -1,7 +1,6 @@
 package com.slimshady.weather.util.typeconverters
 
 import androidx.room.TypeConverter
-import com.slimshady.weather.data.remote.model.places_response.PredictionsItem
 import com.slimshady.weather.data.remote.model.weather.ListItem
 import com.slimshady.weather.data.remote.model.weather.WeatherItem
 import com.squareup.moshi.Moshi

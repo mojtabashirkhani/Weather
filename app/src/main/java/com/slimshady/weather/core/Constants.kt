@@ -4,7 +4,7 @@ object Constants {
 
     object NetworkService {
         const val BASE_URL_WEATHER = "http://api.openweathermap.org/data/2.5/"
-        const val BASE_URL_MAP = "https://map.ir/search/v2/autocomplete"
+        const val BASE_URL_MAP = "https://map.ir/"
         const val API_KEY_WEATHER = "751d80f6c314139192ffcb62c107e654"
         const val RATE_LIMITER_TYPE = "data"
         const val API_KEY_QUERY_WEATHER = "appid"

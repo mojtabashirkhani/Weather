@@ -1,14 +1,8 @@
 package com.slimshady.weather.data.local.db.model
 
-import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
-import com.slimshady.weather.data.remote.model.places_response.MapIR
-import com.slimshady.weather.data.remote.model.places_response.Value
-import kotlinx.android.parcel.Parcelize
-import kotlinx.android.parcel.RawValue
 
 @Entity(tableName = "SearchMapIR")
 data class MapEntity(
