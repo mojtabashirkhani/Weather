@@ -1,6 +1,8 @@
 package com.slimshady.weather.data.remote.usecase
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.map
+import com.google.android.gms.maps.MapView
 import com.slimshady.weather.data.local.db.model.MapEntity
 import com.slimshady.weather.repo.MapRepository
 import com.slimshady.weather.ui.search.SearchViewState
@@ -8,17 +10,16 @@ import com.slimshady.weather.util.UseCaseLiveData
 import com.slimshady.weather.util.domain.Resource
 import javax.inject.Inject
 
-class SearchUseCase @Inject internal constructor() {
+class SearchUseCase @Inject internal constructor(private val repository: MapRepository):
+    UseCaseLiveData<SearchViewState, SearchUseCase.SearchParams, MapRepository>() {
 
-   /* override fun getRepository(): MapRepository {
+    override fun getRepository(): MapRepository {
         return repository
     }
 
 
     override fun buildUseCaseObservable(params: SearchParams?): LiveData<SearchViewState> {
-        return repository.loadCitiesByCityName(
-            cityName = params?.city ?: ""
-        ).map {
+        return repository.loadCitiesByCityName(params?.text ?: "", params?.select ?:  "", params?.fetchRequired ?: false).map {
             onSearchResultReady(it)
         }
     }
@@ -28,7 +29,10 @@ class SearchUseCase @Inject internal constructor() {
     }
 
     class SearchParams(
-        val city: String = ""
-        ) : UseCaseLiveData.Params()*/
+        val text: String = "",
+        val select: String = "",
+        val fetchRequired: Boolean
+
+        ) : UseCaseLiveData.Params()
 
 }

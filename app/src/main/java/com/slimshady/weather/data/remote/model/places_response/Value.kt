@@ -1,9 +1,13 @@
 package com.slimshady.weather.data.remote.model.places_response
 
+import android.os.Parcelable
 import com.slimshady.weather.data.remote.MapApi
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
+@Parcelize
 @JsonClass(generateAdapter = true)
 data class Value(
     @Json(name = "address")
@@ -22,7 +26,7 @@ data class Value(
     val fclass: String,
 
     @Json(name = "geom")
-    val geom: MapApi.Geom,
+    val geom: Geom,
 
     @Json(name = "neighborhood")
     val neighborhood: String,
@@ -38,4 +42,4 @@ data class Value(
 
     @Json(name = "type")
     val type: String
-)
+):Parcelable

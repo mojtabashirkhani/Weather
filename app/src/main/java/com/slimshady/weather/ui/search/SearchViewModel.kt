@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class SearchViewModel @Inject constructor(private val searchUseCase: SearchUseCase): ViewModel() {
 
-    /*private val _searchParams = MutableLiveData<SearchUseCase.SearchParams>()
+    private val _searchParams = MutableLiveData<SearchUseCase.SearchParams>()
 
     fun getSearchViewState() = searchViewState
 
@@ -19,5 +19,5 @@ class SearchViewModel @Inject constructor(private val searchUseCase: SearchUseCa
     fun setSearchParams(params: SearchUseCase.SearchParams) {
             _searchParams.postValue(params)
 
-    }*/
+    }
 }
