@@ -56,7 +56,7 @@ object DataConverter {
         return adapter.toJson(objects)
     }
 
-    @TypeConverter
+  /*  @TypeConverter
     @JvmStatic
     fun predictionsItemStringToList(data: String?): List<PredictionsItem>? {
         if (data == null) {
@@ -76,5 +76,5 @@ object DataConverter {
         val type = Types.newParameterizedType(List::class.java, PredictionsItem::class.java)
         val adapter = moshi.adapter<List<PredictionsItem>>(type)
         return adapter.toJson(objects)
-    }
+    }*/
 }
