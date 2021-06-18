@@ -14,6 +14,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.databinding.library.baseAdapters.BR
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
@@ -123,12 +124,24 @@ abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val lay
             super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
     }
-
     open fun navigate(action: Int) {
         view?.let { _view ->
             Navigation.findNavController(_view).navigate(action)
         }
     }
+
+    open fun navigate(action: Int, bundle: Bundle) {
+        view?.let { _view ->
+            Navigation.findNavController(_view).navigate(action, bundle)
+        }
+    }
+
+    open fun navigate(action: NavDirections) {
+        view?.let { _view ->
+            Navigation.findNavController(_view).navigate(action)
+        }
+    }
+
 
     companion object {
         private const val PERMISSION_REQUEST_CODE = 9824

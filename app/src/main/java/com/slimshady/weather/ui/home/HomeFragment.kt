@@ -1,7 +1,9 @@
 package com.slimshady.weather.ui.home
 
 import android.annotation.SuppressLint
+import android.os.Bundle
 import android.util.Log
+import androidx.navigation.fragment.navArgs
 import com.slimshady.weather.MainActivity
 import com.slimshady.weather.R
 import com.slimshady.weather.base.BaseFragment
@@ -21,10 +23,14 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
 
     @SuppressLint("LogNotTimber")
     override fun initViews() {
+
+
+        val args: HomeFragmentArgs = HomeFragmentArgs.fromBundle(arguments?: Bundle())
+
         mViewDataBinding.viewModel?.setCurrentWeatherParams(
             CurrentWeatherUseCase.CurrentWeatherParams(
-                "40.7127",
-                "-74.006",
+                args.lat ,
+                args.lon ,
                 isNetworkAvailable(requireContext()),
                 Constants.Coords.METRIC
             )
@@ -32,8 +38,8 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
 
         mViewDataBinding.viewModel?.setForecastParams(
             ForecastUseCase.ForecastParams(
-                "40.7127",
-                "-74.006",
+                args.lat ,
+                args.lon ,
                 isNetworkAvailable(requireContext()),
                 Constants.Coords.METRIC
             )
