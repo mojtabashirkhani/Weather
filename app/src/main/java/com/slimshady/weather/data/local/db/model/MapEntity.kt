@@ -20,7 +20,7 @@ data class MapEntity(
 
 
     @ColumnInfo(name = "value")
-    var value:  List<Value>
+    var value: @RawValue List<Value>?
 
 
 ) : Parcelable {

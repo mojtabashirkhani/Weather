@@ -7,6 +7,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @JsonClass(generateAdapter = true)
 data class Geom(
-    val coordinates: List<Double>,
-    val type: String
+    val coordinates: List<Double>?,
+    val type: String?
 ):Parcelable

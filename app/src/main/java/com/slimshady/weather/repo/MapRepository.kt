@@ -20,13 +20,13 @@ class MapRepository @Inject constructor(
 
     private val searchCitiesRateLimit = RateLimiter<String>(30, TimeUnit.SECONDS)
 
-    fun loadCitiesByCityName(text: String, select: String, fetchRequired: Boolean): LiveData<Resource<MapEntity>> {
-        return object : NetworkBoundResource<MapEntity, MapModel>() {
+    fun loadCitiesByCityName(text: String, select: String, fetchRequired: Boolean): LiveData<Resource<List<MapEntity>>> {
+        return object : NetworkBoundResource<List<MapEntity>, MapModel>() {
             override fun saveCallResult(item: MapModel) = searchLocalDataSource.addSearchItem(item)
 
-            override fun shouldFetch(data: MapEntity?): Boolean = fetchRequired
+            override fun shouldFetch(data: List<MapEntity>?): Boolean = fetchRequired
 
-            override fun loadFromDb(): LiveData<MapEntity> = searchLocalDataSource.getRecentSearches()
+            override fun loadFromDb(): LiveData<List<MapEntity>> = searchLocalDataSource.getRecentSearches()
 
             override fun createCall(): Single<MapModel> = searchRemoteDataSource.getPlaceResults(text, select)
 

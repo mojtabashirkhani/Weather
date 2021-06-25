@@ -7,7 +7,7 @@ import com.slimshady.weather.util.domain.Status
 class SearchViewState(
     val status: Status,
     val error: String? = null,
-    val data: MapEntity? = null
+    val data: List<MapEntity>? = null
 ) : BaseViewState(status, error) {
     fun getSearch() = data
 }

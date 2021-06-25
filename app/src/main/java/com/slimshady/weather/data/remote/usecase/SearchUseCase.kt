@@ -24,7 +24,7 @@ class SearchUseCase @Inject internal constructor(private val repository: MapRepo
         }
     }
 
-    private fun onSearchResultReady(resource: Resource<MapEntity>): SearchViewState {
+    private fun onSearchResultReady(resource: Resource<List<MapEntity>>): SearchViewState {
         return SearchViewState(status = resource.status, error = resource.message, data = resource.data)
     }
 

@@ -9,5 +9,5 @@ class SearchLocalDataSource @Inject constructor(private val mapDao: MapDao)  {
 
     fun addSearchItem(mapModel: MapModel) = mapDao.addSearchItem(MapEntity(mapModel))
 
-    fun getRecentSearches() = mapDao.getRecentSearches()
+    fun getRecentSearches()  = mapDao.getRecentSearches()
 }

@@ -11,7 +11,7 @@ import com.slimshady.weather.data.local.db.model.MapEntity
 interface MapDao {
 
     @Query("SELECT * FROM SearchMapIR")
-    fun getRecentSearches(): LiveData<MapEntity>
+    fun getRecentSearches(): LiveData<List<MapEntity>>
 
     /**
      *@author Burhan ud din ---> method used to add item searched

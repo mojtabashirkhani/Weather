@@ -10,9 +10,9 @@ import kotlinx.android.parcel.RawValue
 @JsonClass(generateAdapter = true)
 data class MapModel (
     @Json(name = "odata.count")
-    val odata: Int,
+    val odata: Int?,
 
 
     @Json(name = "value")
-    val value: @RawValue List<Value>
+    val value: @RawValue List<Value>?
 ): Parcelable
