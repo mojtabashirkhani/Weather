@@ -3,6 +3,7 @@ package com.slimshady.weather.di.builder
 import androidx.lifecycle.ViewModel
 import com.slimshady.weather.di.qualifier.ViewModelKey
 import com.slimshady.weather.ui.home.HomeViewModel
+import com.slimshady.weather.ui.home.forecast.ForecastItemViewModel
 import com.slimshady.weather.ui.search.SearchViewModel
 import com.slimshady.weather.ui.search.result.SearchResultViewModel
 
@@ -27,6 +28,11 @@ abstract class AppViewModelBuilder {
     @IntoMap
     @ViewModelKey(SearchResultViewModel::class)
     abstract fun bindSearchResultViewModel(searchResultViewModel: SearchResultViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ForecastItemViewModel::class)
+    abstract fun bindForecastItemViewModel(forecastItemViewModel: ForecastItemViewModel): ViewModel
 
 
 }

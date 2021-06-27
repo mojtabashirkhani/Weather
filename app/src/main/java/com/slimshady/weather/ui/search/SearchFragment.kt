@@ -24,8 +24,10 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
 
 
         initSearchView()
+        initSearchResultsAdapter()
         mViewDataBinding.viewModel?.getSearchViewState()?.observe(this) {
-           Log.d("search", it.data.toString())
+            mViewDataBinding.viewState = it
+            initSearchResultsRecyclerView(it.data)
         }
 
     }
@@ -51,8 +53,31 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
         })
     }
 
-    private fun initSearchResultsRecyclerView(results: List<MapEntity>?) {
+
+    private fun initSearchResultsAdapter() {
+        val adapter = SearchResultAdapter { item ->
+           /* item.coord?.let {
+                binding.viewModel?.saveCoordsToSharedPref(it)
+                    ?.subscribe { _, _ ->
+
+                        tryCatch(
+                            tryBlock = {
+                                binding.searchView.hideKeyboard((activity as MainActivity))
+                            }
+                        )
+
+                        findNavController().navigate(R.id.action_searchFragment_to_dashboardFragment)
+                    }
+            }*/
+        }
+
+        mViewDataBinding.recyclerSearch.adapter = adapter
         mViewDataBinding.recyclerSearch.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+    }
+
+
+
+    private fun initSearchResultsRecyclerView(results: List<MapEntity>?) {
         (mViewDataBinding.recyclerSearch.adapter as? SearchResultAdapter)?.submitList(results)
     }
 }
