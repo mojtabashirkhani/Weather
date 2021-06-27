@@ -6,10 +6,11 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import com.slimshady.weather.base.BaseAdapter
 import com.slimshady.weather.data.local.db.model.MapEntity
+import com.slimshady.weather.data.remote.model.places_response.Value
 import com.slimshady.weather.databinding.ItemSearchBinding
 
 
-class SearchResultAdapter(private val callBack: (MapEntity) -> Unit) : BaseAdapter<MapEntity>(diffCallback) {
+class SearchResultAdapter(private val callBack: (Value) -> Unit) : BaseAdapter<Value>(diffCallback) {
 
     override fun createBinding(parent: ViewGroup, viewType: Int): ViewDataBinding {
         val mBinding = ItemSearchBinding.inflate(
@@ -34,10 +35,10 @@ class SearchResultAdapter(private val callBack: (MapEntity) -> Unit) : BaseAdapt
     }
 }
 
-val diffCallback = object : DiffUtil.ItemCallback<MapEntity>() {
-    override fun areContentsTheSame(oldItem: MapEntity, newItem: MapEntity): Boolean =
+val diffCallback = object : DiffUtil.ItemCallback<Value>() {
+    override fun areContentsTheSame(oldItem: Value, newItem: Value): Boolean =
         oldItem == newItem
 
-    override fun areItemsTheSame(oldItem: MapEntity, newItem: MapEntity): Boolean =
-        oldItem.value == newItem.value
+    override fun areItemsTheSame(oldItem: Value, newItem: Value): Boolean =
+        oldItem.city == newItem.city
 }

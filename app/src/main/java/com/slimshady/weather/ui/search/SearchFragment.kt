@@ -27,7 +27,7 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
         initSearchResultsAdapter()
         mViewDataBinding.viewModel?.getSearchViewState()?.observe(this) {
             mViewDataBinding.viewState = it
-            initSearchResultsRecyclerView(it.data)
+            initSearchResultsRecyclerView(it.data?.value)
         }
 
     }
@@ -77,7 +77,7 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
 
 
 
-    private fun initSearchResultsRecyclerView(results: List<MapEntity>?) {
+    private fun initSearchResultsRecyclerView(results: List<Value>?) {
         (mViewDataBinding.recyclerSearch.adapter as? SearchResultAdapter)?.submitList(results)
     }
 }
