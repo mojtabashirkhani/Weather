@@ -5,8 +5,8 @@ import androidx.lifecycle.map
 import com.slimshady.weather.core.Constants
 import com.slimshady.weather.data.local.db.model.ForecastEntity
 import com.slimshady.weather.repo.ForecastRepository
-import com.slimshady.weather.ui.ForecastMapper
-import com.slimshady.weather.ui.ForecastViewState
+import com.slimshady.weather.ui.home.ForecastMapper
+import com.slimshady.weather.ui.home.ForecastViewState
 import com.slimshady.weather.util.UseCaseLiveData
 import com.slimshady.weather.util.domain.Resource
 import javax.inject.Inject

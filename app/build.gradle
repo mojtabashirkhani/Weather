@@ -189,6 +189,8 @@ dependencies {
 
     implementation 'com.google.android.libraries.places:places:2.4.0'
 
+    implementation 'com.loopeer.lib:shadow:0.0.3'
+
     api 'org.apache.commons:commons-lang3:3.8'
 
     /*   // (Recommended) Add the Google Analytics dependency.

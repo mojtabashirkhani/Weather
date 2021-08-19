@@ -1,13 +1,9 @@
 package com.slimshady.weather.ui.home
 
-import android.content.SharedPreferences
 import androidx.lifecycle.*
 
 import com.slimshady.weather.data.remote.usecase.CurrentWeatherUseCase
 import com.slimshady.weather.data.remote.usecase.ForecastUseCase
-import com.slimshady.weather.ui.CurrentWeatherViewState
-import com.slimshady.weather.ui.ForecastViewState
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**

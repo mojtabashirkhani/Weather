@@ -5,7 +5,7 @@ import androidx.lifecycle.map
 import com.slimshady.weather.core.Constants
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.repo.CurrentWeatherRepository
-import com.slimshady.weather.ui.CurrentWeatherViewState
+import com.slimshady.weather.ui.home.CurrentWeatherViewState
 import com.slimshady.weather.util.UseCaseLiveData
 import com.slimshady.weather.util.domain.Resource
 import javax.inject.Inject

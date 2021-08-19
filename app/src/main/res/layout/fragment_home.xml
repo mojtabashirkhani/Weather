@@ -18,6 +18,7 @@
         android:id="@+id/rootView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:fitsSystemWindows="true"
         tools:context=".ui.dashboard.DashboardFragment">
 
@@ -31,12 +32,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:checkable="false"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:text="@string/today"
+                    android:textColor="@color/chipTextColor"
+                    app:chipBackgroundColor="@color/chipItemBackgroundColor" />
 
                 <include
                     android:id="@+id/container_forecast"
                     layout="@layout/layout_dashboard_forecast"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/chipToday"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
@@ -47,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    />
+                    app:visibility="@{viewState.isLoading()}" />
 
                 <TextView
                     android:id="@+id/textViewForecastHeader"
@@ -56,6 +70,7 @@
                     android:layout_below="@id/container_forecast"
                     android:layout_marginStart="16dp"
                     android:text="@string/next_5_days"
+                    android:textColor="@color/mainTextColor"
                     android:textSize="19sp"
                     android:textStyle="bold" />
 
@@ -80,8 +95,10 @@
             android:backgroundTint="@android:color/holo_red_light"
             app:cardCornerRadius="0dp"
             app:cardElevation="16dp"
+            app:setErrorView="@{viewState}"
             app:strokeColor="@android:color/holo_red_dark"
-            app:strokeWidth="2dp">
+            app:strokeWidth="2dp"
+            tools:targetApi="lollipop">
 
             <TextView
                 android:layout_width="match_parent"
@@ -94,6 +111,7 @@
                 android:paddingBottom="12dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
+                app:setErrorText="@{viewState}"
                 tools:text="Status code : 500 Internal server error!" />
 
         </com.google.android.material.card.MaterialCardView>

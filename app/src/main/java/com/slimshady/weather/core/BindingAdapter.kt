@@ -17,7 +17,6 @@ import com.squareup.picasso.Picasso
  * Created by Furkan on 2019-10-16
  */
 
-/*
 @BindingAdapter("app:visibility")
 fun setVisibilty(view: View, isVisible: Boolean) {
     if (isVisible) {
@@ -56,4 +55,3 @@ fun setErrorText(view: TextView, viewState: BaseViewState?) {
     else
         view.text = view.context.getString(R.string.unexpected_exception)
 }
-*/
