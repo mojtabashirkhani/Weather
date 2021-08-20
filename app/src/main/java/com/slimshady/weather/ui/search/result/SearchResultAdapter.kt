@@ -37,8 +37,8 @@ class SearchResultAdapter(private val callBack: (Value) -> Unit) : BaseAdapter<V
 
 val diffCallback = object : DiffUtil.ItemCallback<Value>() {
     override fun areContentsTheSame(oldItem: Value, newItem: Value): Boolean =
-        oldItem == newItem
+        oldItem.geom == newItem.geom
 
     override fun areItemsTheSame(oldItem: Value, newItem: Value): Boolean =
-        oldItem.city == newItem.city
+        oldItem.geom == newItem.geom
 }

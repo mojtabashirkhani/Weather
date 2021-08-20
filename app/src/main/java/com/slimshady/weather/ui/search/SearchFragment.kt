@@ -23,8 +23,8 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
 
 
 
-//        initSearchView()
-        mViewDataBinding.viewModel?.setSearchParams(SearchUseCase.SearchParams("تهران", "city", isNetworkAvailable(context ?: requireContext())))
+        initSearchView()
+//        mViewDataBinding.viewModel?.setSearchParams(SearchUseCase.SearchParams("تهران", "city", isNetworkAvailable(context ?: requireContext())))
         initSearchResultsAdapter()
         mViewDataBinding.viewModel?.getSearchViewState()?.observe(this) {
             mViewDataBinding.viewState = it
@@ -33,7 +33,7 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
 
     }
 
-  /*  private fun initSearchView() {
+    private fun initSearchView() {
         mViewDataBinding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(newText: String?): Boolean {
                 if (newText?.isNotEmpty() == true && newText.count() > 2) {
@@ -52,7 +52,7 @@ class SearchFragment: BaseFragment<SearchViewModel, FragmentSearchBinding>(R.lay
             }
 
         })
-    }*/
+    }
 
 
     private fun initSearchResultsAdapter() {
