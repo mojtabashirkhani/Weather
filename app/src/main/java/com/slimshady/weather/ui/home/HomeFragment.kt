@@ -45,6 +45,7 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     HomeViewModel::class.java
 ), SharedPreferences.OnSharedPreferenceChangeListener {
 
+    val args : HomeFragmentArgs by navArgs()
 
     private var foregroundOnlyLocationServiceBound = false
 
@@ -76,6 +77,9 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @SuppressLint("LogNotTimber")
     override fun initViews() {
+
+        val lon = args.geom?.coordinates?.get(0)
+        val lat = args.geom?.coordinates?.get(1)
 
         foregroundOnlyBroadcastReceiver = ForegroundOnlyBroadcastReceiver()
 
@@ -120,8 +124,8 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
 
         mViewDataBinding.viewModel?.setCurrentWeatherParams(
             CurrentWeatherUseCase.CurrentWeatherParams(
-                "35.6892",
-                "51.3890",
+                lat.toString(),
+                lon.toString(),
                 isNetworkAvailable(requireContext()),
                 Constants.Coords.METRIC
             )
@@ -129,8 +133,8 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
 
         mViewDataBinding.viewModel?.setForecastParams(
             ForecastUseCase.ForecastParams(
-                "35.6892",
-                "51.3890",
+                lat.toString(),
+                lon.toString(),
                 isNetworkAvailable(requireContext()),
                 Constants.Coords.METRIC
             )
