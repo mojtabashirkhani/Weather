@@ -79,7 +79,7 @@ abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val lay
         checkPermissions(permissions, fn)
     }
 
-    private fun checkPermissions(permissions: Array<String>, fn: (Array<BasePermissionModel>) -> Unit) {
+    fun checkPermissions(permissions: Array<String>, fn: (Array<BasePermissionModel>) -> Unit) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(permissions, PERMISSION_REQUEST_CODE)
             permissionCallback = fn

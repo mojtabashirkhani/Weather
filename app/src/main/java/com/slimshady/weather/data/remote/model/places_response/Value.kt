@@ -11,35 +11,35 @@ import kotlinx.android.parcel.RawValue
 @JsonClass(generateAdapter = true)
 data class Value(
     @Json(name = "address")
-    val address: String?,
+    var address: String? = "",
 
     @Json(name = "city")
-    val city: String?,
+    var city: String? = "",
 
     @Json(name = "county")
-    val county: String?,
+    var county: String? = "",
 
     @Json(name = "district")
-    val district: String?,
+    var district: String? = "",
 
     @Json(name = "fclass")
-    val fclass: String?,
+    var fclass: String? = "",
 
     @Json(name = "geom")
     val geom: Geom?,
 
     @Json(name = "neighborhood")
-    val neighborhood: String?,
+    var neighborhood: String? = "",
 
     @Json(name = "province")
-    val province: String?,
+    var province: String? = "",
 
     @Json(name = "region")
-    val region: String?,
+    var region: String? = "",
 
     @Json(name = "title")
-    val title: String?,
+    var title: String? = "",
 
     @Json(name = "type")
-    val type: String?
+    var type: String?  = ""
 ):Parcelable
