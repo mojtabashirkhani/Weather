@@ -47,8 +47,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="4dp"
                 android:tint="@{viewModel.item.getHourColor()}"
+                app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"
                 tools:src="@drawable/a10d_svg" />
-<!--            app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"-->
 
 
             <TextView

@@ -82,9 +82,8 @@
                             android:layout_marginTop="12dp"
                             android:layout_marginBottom="12dp"
                             android:transitionName="@{String.format(@string/forecastIcon, viewModel.weatherItem.getDay())}"
+                            app:setWeatherIcon="@{viewModel.weatherItem.getWeatherItem().icon}"
                             tools:src="@drawable/a10d_svg" />
-
-<!--                        app:setWeatherIcon="@{viewModel.weatherItem.getWeatherItem().icon}"-->
 
 
                         <TextView

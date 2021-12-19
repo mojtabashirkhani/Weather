@@ -21,8 +21,8 @@
         android:visibility="@{viewState.isLoading() ? View.INVISIBLE : View.VISIBLE}"
         app:cardCornerRadius="24dp"
         app:cardElevation="8dp"
-        tools:visibility="invisible"
-        tools:targetApi="lollipop">
+        tools:targetApi="lollipop"
+        tools:visibility="invisible">
 
         <RelativeLayout
             android:id="@+id/rootView"
@@ -35,9 +35,8 @@
                 android:layout_height="124dp"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="48dp"
+                app:setWeatherIcon="@{viewState.data.getCurrentWeather().icon}"
                 tools:src="@drawable/a10d_svg" />
-
-<!--            app:setWeatherIcon="@{viewState.data.getCurrentWeather().icon}"-->
 
 
             <TextView

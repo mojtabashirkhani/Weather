@@ -44,8 +44,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="40dp"
-            android:transitionName="@{String.format(@string/cardView, viewModel.item.getDay())}"
             android:backgroundTint="@{viewModel.item.getColor()}"
+            android:transitionName="@{String.format(@string/cardView, viewModel.item.getDay())}"
             app:cardCornerRadius="24dp"
             tools:backgroundTint="@android:color/holo_orange_dark">
 
@@ -86,8 +86,8 @@
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    tools:text="Monday"
-                    android:transitionName="@{String.format(@string/dayOfWeek, viewModel.item.getDay())}" />
+                    android:transitionName="@{String.format(@string/dayOfWeek, viewModel.item.getDay())}"
+                    tools:text="Monday" />
 
                 <ImageView
                     android:id="@+id/imageViewForecastIcon"
@@ -96,10 +96,9 @@
                     android:layout_below="@id/textViewDayOfWeek"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="12dp"
-                    tools:src="@drawable/ic_splash_big_cloud"
-                    android:transitionName="@{String.format(@string/forecastIcon, viewModel.item.getDay())}"/>
-
-<!--                app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"-->
+                    android:transitionName="@{String.format(@string/forecastIcon, viewModel.item.getDay())}"
+                    app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"
+                    tools:src="@drawable/ic_splash_big_cloud" />
 
 
                 <TextView
@@ -113,8 +112,8 @@
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     android:textStyle="bold"
-                    tools:text="23°"
-                    android:transitionName="@{String.format(@string/temp, viewModel.item.getDay())}"/>
+                    android:transitionName="@{String.format(@string/temp, viewModel.item.getDay())}"
+                    tools:text="23°" />
 
                 <LinearLayout
                     android:id="@+id/linearLayoutTempMaxMin"
