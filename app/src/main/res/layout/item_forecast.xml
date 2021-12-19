@@ -96,9 +96,11 @@
                     android:layout_below="@id/textViewDayOfWeek"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="12dp"
-                    app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"
                     tools:src="@drawable/ic_splash_big_cloud"
                     android:transitionName="@{String.format(@string/forecastIcon, viewModel.item.getDay())}"/>
+
+<!--                app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"-->
+
 
                 <TextView
                     android:id="@+id/textViewTemp"

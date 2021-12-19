@@ -6,6 +6,8 @@ import com.slimshady.weather.ui.home.HomeViewModel
 import com.slimshady.weather.ui.home.forecast.ForecastItemViewModel
 import com.slimshady.weather.ui.search.SearchViewModel
 import com.slimshady.weather.ui.search.result.SearchResultViewModel
+import com.slimshady.weather.ui.weather_detail.WeatherDetailViewModel
+import com.slimshady.weather.ui.weather_detail.weatherHourOfDay.WeatherHourOfDayItemViewModel
 
 import dagger.Binds
 import dagger.Module
@@ -33,6 +35,16 @@ abstract class AppViewModelBuilder {
     @IntoMap
     @ViewModelKey(ForecastItemViewModel::class)
     abstract fun bindForecastItemViewModel(forecastItemViewModel: ForecastItemViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(WeatherDetailViewModel::class)
+    abstract fun bindWeatherDetailViewModel(weatherDetailViewModel: WeatherDetailViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(WeatherHourOfDayItemViewModel::class)
+    abstract fun bindWeatherHourOfDayItemViewModel(weatherHourOfDayItemViewModel: WeatherHourOfDayItemViewModel): ViewModel
 
 
 }

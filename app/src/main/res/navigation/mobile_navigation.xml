@@ -17,6 +17,9 @@
             app:argType="com.slimshady.weather.data.remote.model.places_response.Geom"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_weather_detail"
+            app:destination="@id/nav_weather_detail" />
     </fragment>
 
     <fragment
@@ -33,6 +36,22 @@
 
 
         </action>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_weather_detail"
+        android:name="com.slimshady.weather.ui.weather_detail.WeatherDetailFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_weather_detail" >
+
+
+        <argument
+            android:name="weatherItem"
+            app:argType="com.slimshady.weather.data.remote.model.weather.ListItem"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
