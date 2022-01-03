@@ -19,9 +19,6 @@ import com.slimshady.weather.util.extensions.isNetworkAvailable
 import com.slimshady.weather.util.extensions.observeWith
 
 private const val TAG = "HomeFragment"
-private const val REQUEST_FOREGROUND_ONLY_PERMISSIONS_REQUEST_CODE = 34
-
-
 
 class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     R.layout.fragment_home,
@@ -30,8 +27,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
 
     val args : HomeFragmentArgs by navArgs()
 
-
-
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @SuppressLint("LogNotTimber")
     override fun initViews() {
@@ -39,13 +34,7 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
         val lon = args.geom?.coordinates?.get(0)
         val lat = args.geom?.coordinates?.get(1)
 
-
-
-
-
-
         initForecastAdapter()
-
 
         mViewDataBinding.viewModel?.setCurrentWeatherParams(
             CurrentWeatherUseCase.CurrentWeatherParams(
@@ -76,8 +65,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
         ) {
             mViewDataBinding.containerForecast.viewState = it
         }
-
-
 
     }
 

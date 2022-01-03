@@ -10,11 +10,17 @@
       <map>
         <entry key="app/src/main/res/drawable/a01d_svg.xml" value="0.1895" />
         <entry key="app/src/main/res/drawable/a10d_svg.xml" value="0.1505" />
+        <entry key="app/src/main/res/layout-v21/item_forecast.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_send.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_share.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_tools.xml" value="0.18125" />
       </map>
     </option>
   </component>

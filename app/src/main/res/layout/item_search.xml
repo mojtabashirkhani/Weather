@@ -11,9 +11,6 @@
             name="viewModel"
             type="com.slimshady.weather.ui.search.result.SearchResultViewModel" />
 
-        <!-- <variable
-             name="listener"
-             type="ir.paca.smarthome.ui.cardScreens.cards.CardsListeners" />-->
 
     </data>
 

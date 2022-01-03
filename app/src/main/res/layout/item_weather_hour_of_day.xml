@@ -21,7 +21,8 @@
         android:backgroundTint="@color/white"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="18dp"
-        app:cardElevation="0dp">
+        app:cardElevation="0dp"
+        tools:targetApi="lollipop">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
                 tools:text="14:00" />
 
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageViewForecastIcon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"

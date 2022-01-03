@@ -37,7 +37,8 @@
                 app:borderWidth="0dp"
                 app:layout_anchor="@id/cardView"
                 app:layout_anchorGravity="center_horizontal|top"
-                app:useCompatPadding="true" />
+                app:useCompatPadding="true"
+                tools:targetApi="lollipop" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView"

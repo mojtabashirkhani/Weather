@@ -47,7 +47,8 @@
             android:backgroundTint="@{viewModel.item.getColor()}"
             android:transitionName="@{String.format(@string/cardView, viewModel.item.getDay())}"
             app:cardCornerRadius="24dp"
-            tools:backgroundTint="@android:color/holo_orange_dark">
+            tools:backgroundTint="@android:color/holo_orange_dark"
+            tools:targetApi="lollipop">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -89,7 +90,7 @@
                     android:transitionName="@{String.format(@string/dayOfWeek, viewModel.item.getDay())}"
                     tools:text="Monday" />
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/imageViewForecastIcon"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
@@ -97,6 +98,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="12dp"
                     android:transitionName="@{String.format(@string/forecastIcon, viewModel.item.getDay())}"
+                    android:tint="@{viewModel.item.getHourColor()}"
                     app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"
                     tools:src="@drawable/ic_splash_big_cloud" />
 
