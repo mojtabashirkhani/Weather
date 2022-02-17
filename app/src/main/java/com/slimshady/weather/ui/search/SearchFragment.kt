@@ -1,23 +1,21 @@
 package com.slimshady.weather.ui.search
 
 import android.annotation.SuppressLint
-import android.os.Bundle
-import android.util.Log
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.slimshady.weather.MainActivity
 import com.slimshady.weather.R
 import com.slimshady.weather.base.BaseFragment
-import com.slimshady.weather.data.local.db.model.MapEntity
 import com.slimshady.weather.data.remote.model.places_response.Value
 import com.slimshady.weather.data.remote.usecase.SearchUseCase
 import com.slimshady.weather.databinding.FragmentSearchBinding
 import com.slimshady.weather.ui.search.result.SearchResultAdapter
-import com.slimshady.weather.util.extensions.hideKeyboard
 import com.slimshady.weather.util.extensions.isNetworkAvailable
-import com.slimshady.weather.util.extensions.tryCatch
+import kotlinx.android.synthetic.main.item_search.*
+import java.util.stream.Collectors
 
 class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>(
     R.layout.fragment_search,
@@ -93,7 +91,14 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>(
 
 
     private fun initSearchResultsRecyclerView(results: List<Value>?) {
-        (mViewDataBinding.recyclerSearch.adapter as? SearchResultAdapter)?.submitList(results)
+        val nameSet: MutableSet<String> = HashSet()
+        val employeesDistinctByName: List<Value> =
+            results?.stream()
+                ?.filter { e -> nameSet.add(e.city.toString()) }
+                ?.collect(Collectors.toList()) ?: emptyList()
+
+
+        (mViewDataBinding.recyclerSearch.adapter as? SearchResultAdapter)?.submitList(employeesDistinctByName)
     }
 }
 
