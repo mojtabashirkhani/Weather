@@ -91,14 +91,9 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>(
 
 
     private fun initSearchResultsRecyclerView(results: List<Value>?) {
-        val nameSet: MutableSet<String> = HashSet()
-        val employeesDistinctByName: List<Value> =
-            results?.stream()
-                ?.filter { e -> nameSet.add(e.city.toString()) }
-                ?.collect(Collectors.toList()) ?: emptyList()
+        val newResults = results?.distinctBy { it.city }
+        (mViewDataBinding.recyclerSearch.adapter as? SearchResultAdapter)?.submitList(newResults)
 
-
-        (mViewDataBinding.recyclerSearch.adapter as? SearchResultAdapter)?.submitList(employeesDistinctByName)
     }
 }
 
