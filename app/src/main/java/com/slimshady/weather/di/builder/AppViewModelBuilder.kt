@@ -6,6 +6,7 @@ import com.slimshady.weather.ui.home.HomeViewModel
 import com.slimshady.weather.ui.home.forecast.ForecastItemViewModel
 import com.slimshady.weather.ui.search.SearchViewModel
 import com.slimshady.weather.ui.search.result.SearchResultViewModel
+import com.slimshady.weather.ui.splash.SplashFragmentViewModel
 import com.slimshady.weather.ui.weather_detail.WeatherDetailViewModel
 import com.slimshady.weather.ui.weather_detail.weatherHourOfDay.WeatherHourOfDayItemViewModel
 
@@ -45,6 +46,11 @@ abstract class AppViewModelBuilder {
     @IntoMap
     @ViewModelKey(WeatherHourOfDayItemViewModel::class)
     abstract fun bindWeatherHourOfDayItemViewModel(weatherHourOfDayItemViewModel: WeatherHourOfDayItemViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(SplashFragmentViewModel::class)
+    abstract fun bindSplashFragmentViewModel(splashFragmentViewModel: SplashFragmentViewModel): ViewModel
 
 
 }

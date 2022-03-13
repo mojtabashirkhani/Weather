@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:fitsSystemWindows="true"
-        tools:context=".ui.dashboard.DashboardFragment">
+        tools:context=".ui.home.HomeFragment">
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/scrollView"

@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.slimshady.weather.R
 import com.slimshady.weather.base.BaseFragment
@@ -87,6 +89,9 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>(
         mViewDataBinding.recyclerSearch.adapter = adapter
         mViewDataBinding.recyclerSearch.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+       /* val decorator = DividerItemDecoration(context, LinearLayoutManager.VERTICAL)
+        decorator.setDrawable(context?.let { ContextCompat.getDrawable(it, R.drawable.divider) }!!)
+        mViewDataBinding.recyclerSearch.addItemDecoration(decorator)*/
     }
 
 

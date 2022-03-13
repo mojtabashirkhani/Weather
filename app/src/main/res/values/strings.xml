@@ -37,7 +37,7 @@
     <string name="county">شهرستان</string>
     <string name="neighborhood">محله</string>
 
-    <string name="hyphen"> - </string>
+    <string name="hyphen">\u0020-\u0020</string>
     <string name="space">&#160;</string>
 
 
