@@ -1,6 +1,9 @@
 package com.slimshady.weather.ui.splash
 
 import android.graphics.Color
+import android.view.View
+import android.view.WindowManager
+import android.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import com.mikhaellopez.rxanimation.*
 import com.slimshady.weather.base.BaseFragment
@@ -16,15 +19,17 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
 
     var disposable = CompositeDisposable()
 
+
     override fun initViews() {
 
-      /*  if (mViewDataBinding.viewModel?.sharedPreferences?.getString(Constants.Coords.LON, "").isNullOrEmpty()) {
-            mViewDataBinding.buttonExplore.show()
-            mViewDataBinding.viewModel?.navigateDashboard = false
-        } else {
-            mViewDataBinding.buttonExplore.hide()
-            mViewDataBinding.viewModel?.navigateDashboard = true
-        }*/
+
+        /*  if (mViewDataBinding.viewModel?.sharedPreferences?.getString(Constants.Coords.LON, "").isNullOrEmpty()) {
+              mViewDataBinding.buttonExplore.show()
+              mViewDataBinding.viewModel?.navigateDashboard = false
+          } else {
+              mViewDataBinding.buttonExplore.hide()
+              mViewDataBinding.viewModel?.navigateDashboard = true
+          }*/
 
         mViewDataBinding.viewModel?.navigateDashboard?.let { startSplashAnimation(it) }
 

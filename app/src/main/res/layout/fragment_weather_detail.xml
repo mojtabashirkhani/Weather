@@ -93,6 +93,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/imageViewForecastIcon"
                             android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/b_nazanin"
                             android:text="@{viewModel.weatherItem.main.getTempString()}"
                             android:textColor="@color/white"
                             android:textSize="60sp"
@@ -113,6 +114,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="12dp"
+                                android:fontFamily="@font/b_nazanin"
                                 android:text="@{viewModel.weatherItem.main.getTempMinString()}"
                                 android:textColor="@color/whiteWithHalfOpacity"
                                 android:textSize="30sp" />
@@ -121,6 +123,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="12dp"
+                                android:fontFamily="@font/b_nazanin"
                                 android:text="@{viewModel.weatherItem.main.getTempMaxString()}"
                                 android:textColor="@color/white"
                                 android:textSize="30sp" />
