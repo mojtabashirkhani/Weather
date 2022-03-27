@@ -26,13 +26,13 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="1dp"
-            app:cardCornerRadius="1dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="8dp"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="2dp"
-            app:cardBackgroundColor="#F7EBEC"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="#BFBFBF"
             >
 
         <TextView
