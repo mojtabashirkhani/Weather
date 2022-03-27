@@ -17,7 +17,9 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:fitsSystemWindows="true"
-        tools:context=".ui.weather_detail.WeatherDetailFragment">
+        tools:context=".ui.weather_detail.WeatherDetailFragment"
+
+        >
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/coordinatorLayout"
@@ -144,7 +146,7 @@
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recyclerViewHourOfDay"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_margin="16dp"
                                 android:orientation="horizontal"
                                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

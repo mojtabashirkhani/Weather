@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <data>
 
@@ -23,17 +24,18 @@
         app:cardCornerRadius="18dp"
         app:cardElevation="0dp"
         tools:targetApi="lollipop"
+        android:layoutDirection="rtl"
         >
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <TextView
                 android:id="@+id/textViewHourOfDay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/b_nazanin"
                 android:text="@{viewModel.item.getHourOfDay()}"
@@ -47,7 +49,6 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_below="@id/textViewHourOfDay"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="4dp"
                 android:tint="@{viewModel.item.getHourColor()}"
                 app:setWeatherIcon="@{viewModel.item.getWeatherItem().icon}"
@@ -59,7 +60,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageViewForecastIcon"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/b_nazanin"
                 android:text="@{viewModel.item.main.getTempString()}"
