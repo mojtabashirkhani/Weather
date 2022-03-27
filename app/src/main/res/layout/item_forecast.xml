@@ -70,11 +70,11 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/b_nazanin"
                     android:text="@{viewModel.item.getHourOfDay()}"
                     android:textColor="@color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     tools:text="12:00" />
 

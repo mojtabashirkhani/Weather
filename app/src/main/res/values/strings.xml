@@ -27,7 +27,7 @@
     <string name="menu_home">خانه</string>
     <string name="menu_share">Share</string>
     <string name="unexpected_exception">unexpected_exception</string>
-    <string name="start_typing">Start typing for find your location…</string>
+    <string name="start_typing">مکان مورد نظر را تایپ کنید …</string>
 
     <string name="province">استان</string>
     <string name="county">شهرستان</string>

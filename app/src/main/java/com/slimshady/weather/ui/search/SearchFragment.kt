@@ -2,6 +2,8 @@ package com.slimshady.weather.ui.search
 
 import android.annotation.SuppressLint
 import android.os.Build
+import android.view.Gravity
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat

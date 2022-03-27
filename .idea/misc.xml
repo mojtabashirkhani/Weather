@@ -16,7 +16,7 @@
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.18125" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_send.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_share.xml" value="0.18125" />
@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.16614583333333333" />
         <entry key="app/src/main/res/layout/fragment_tools.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_weather_detail.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_forecast.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.25" />
       </map>
     </option>

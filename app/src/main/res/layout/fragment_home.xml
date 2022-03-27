@@ -42,6 +42,7 @@
                     android:checked="true"
                     android:clickable="false"
                     android:text="@string/today"
+                    style="@style/ChipStyle"
                     android:textColor="@color/chipTextColor"
                     app:chipBackgroundColor="@color/chipItemBackgroundColor" />
 
