@@ -17,6 +17,20 @@ import com.squareup.picasso.Picasso
  * Created by Furkan on 2019-10-16
  */
 
+@BindingAdapter("app:translateDays")
+fun translateDays(view: TextView, txt: String?) {
+    when(txt) {
+        "Saturday" -> view.text = "شنبه"
+        "Sunday" -> view.text = "یکشنبه"
+        "Monday" -> view.text = "دوشنبه"
+        "Tuesday" -> view.text = "سه‌شنبه"
+        "Wednesday" -> view.text = "چهار‌شنبه"
+        "Thursday" -> view.text = "پنجشنبه"
+        "Friday" -> view.text = "جمعه"
+    }
+
+}
+
 @BindingAdapter("app:visibility")
 fun setVisibilty(view: View, isVisible: Boolean) {
     if (isVisible) {

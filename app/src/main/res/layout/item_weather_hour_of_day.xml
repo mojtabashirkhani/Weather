@@ -22,7 +22,8 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="18dp"
         app:cardElevation="0dp"
-        tools:targetApi="lollipop">
+        tools:targetApi="lollipop"
+        >
 
         <RelativeLayout
             android:layout_width="wrap_content"

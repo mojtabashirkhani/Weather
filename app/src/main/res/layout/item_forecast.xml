@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textViewTimeOfDay"
                     android:layout_centerHorizontal="true"
-                    android:text="@{viewModel.item.getDay()}"
+                    app:translateDays="@{viewModel.item.getDay()}"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold"
