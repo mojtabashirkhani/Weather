@@ -9,8 +9,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/a01d_svg.xml" value="0.1895" />
+        <entry key="app/src/main/res/drawable/a03n_svg.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/a10d_svg.xml" value="0.1505" />
         <entry key="app/src/main/res/drawable/divider.xml" value="0.1895" />
+        <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.1875" />
         <entry key="app/src/main/res/layout-v21/item_forecast.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.18125" />
@@ -26,6 +28,9 @@
         <entry key="app/src/main/res/layout/fragment_weather_detail.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_forecast.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_weather_hour_of_day.xml" value="0.15760869565217392" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.17916666666666667" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
       </map>
     </option>
   </component>
