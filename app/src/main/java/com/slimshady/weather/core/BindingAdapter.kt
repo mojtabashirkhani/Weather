@@ -13,9 +13,7 @@ import com.slimshady.weather.util.extensions.show
 import com.squareup.picasso.Picasso
 
 
-/**
- * Created by Furkan on 2019-10-16
- */
+
 
 @BindingAdapter("app:translateDays")
 fun translateDays(view: TextView, txt: String?) {

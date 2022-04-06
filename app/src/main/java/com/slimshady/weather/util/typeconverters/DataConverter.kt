@@ -8,9 +8,6 @@ import com.slimshady.weather.data.remote.model.weather.WeatherItem
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 
-/**
- * Created by Furkan on 2019-10-21
- */
 
 object DataConverter {
 

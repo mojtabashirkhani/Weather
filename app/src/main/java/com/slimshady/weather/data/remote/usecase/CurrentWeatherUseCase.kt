@@ -10,9 +10,6 @@ import com.slimshady.weather.util.UseCaseLiveData
 import com.slimshady.weather.util.domain.Resource
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-21
- */
 
 class CurrentWeatherUseCase @Inject internal constructor(private val repository: CurrentWeatherRepository) : UseCaseLiveData<CurrentWeatherViewState, CurrentWeatherUseCase.CurrentWeatherParams, CurrentWeatherRepository>() {
 

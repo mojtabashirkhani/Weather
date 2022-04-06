@@ -2,9 +2,7 @@ package com.slimshady.weather.util
 
 import androidx.lifecycle.LiveData
 
-/**
- * Created by Furkan on 2019-10-21
- */
+
 
 abstract class UseCaseLiveData<M, P, R> {
 

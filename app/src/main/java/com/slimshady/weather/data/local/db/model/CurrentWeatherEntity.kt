@@ -11,9 +11,6 @@ import kotlinx.android.parcel.Parcelize
 import org.threeten.bp.DayOfWeek
 import org.threeten.bp.LocalDate
 
-/**
- * Created by Furkan on 2019-10-24
- */
 
 @Parcelize
 @Entity(tableName = "CurrentWeather")

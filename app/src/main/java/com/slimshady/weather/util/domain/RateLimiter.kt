@@ -6,9 +6,6 @@ import android.util.ArrayMap
 import androidx.annotation.RequiresApi
 import java.util.concurrent.TimeUnit
 
-/**
- * Created by Furkan on 2019-10-21
- */
 
 /**
  * Utility class that decides whether we should fetch some data or not.

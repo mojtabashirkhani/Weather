@@ -1,7 +1,7 @@
 package com.slimshady.weather.di.builder
 
 
-import com.slimshady.weather.MainActivity
+import com.slimshady.weather.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

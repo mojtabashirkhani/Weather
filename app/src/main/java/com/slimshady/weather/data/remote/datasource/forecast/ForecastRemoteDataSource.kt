@@ -6,9 +6,6 @@ import com.slimshady.weather.data.remote.model.weather.ForecastResponse
 import io.reactivex.Single
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-21
- */
 
 class ForecastRemoteDataSource @Inject constructor(private val api: WeatherApi) {
 

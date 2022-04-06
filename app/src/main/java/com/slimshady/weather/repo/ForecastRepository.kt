@@ -13,9 +13,6 @@ import io.reactivex.Single
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-21
- */
 
 class ForecastRepository @Inject constructor(
     private val forecastRemoteDataSource: ForecastRemoteDataSource,

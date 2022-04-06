@@ -5,9 +5,6 @@ import com.slimshady.weather.base.BaseViewState
 import com.slimshady.weather.data.local.db.model.ForecastEntity
 import com.slimshady.weather.util.domain.Status
 
-/**
- * Created by Furkan on 2019-10-23
- */
 
 class ForecastViewState(
     val status: Status,

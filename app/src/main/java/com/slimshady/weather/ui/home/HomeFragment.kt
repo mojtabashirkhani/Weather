@@ -18,7 +18,6 @@ import com.slimshady.weather.ui.home.forecast.ForecastAdapter
 import com.slimshady.weather.util.extensions.isNetworkAvailable
 import com.slimshady.weather.util.extensions.observeWith
 
-private const val TAG = "HomeFragment"
 
 class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     R.layout.fragment_home,

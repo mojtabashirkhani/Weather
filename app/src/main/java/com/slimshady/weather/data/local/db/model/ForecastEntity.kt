@@ -7,9 +7,6 @@ import com.slimshady.weather.data.remote.model.weather.ForecastResponse
 import com.slimshady.weather.data.remote.model.weather.ListItem
 import kotlinx.android.parcel.Parcelize
 
-/**
- * Created by Furkan on 2019-10-21
- */
 
 @Parcelize
 @Entity(tableName = "Forecast")

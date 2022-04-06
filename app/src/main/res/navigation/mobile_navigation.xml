@@ -76,11 +76,11 @@
 
 
 
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.slimshady.weather.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+    <dialog
+        android:id="@+id/githubDialog"
+        android:name="com.slimshady.weather.ui.GithubDialog"
+        android:label="fragment_github_dialog"
+        tools:layout="@layout/fragment_github_dialog" />
 
 
 </navigation>

@@ -4,9 +4,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 
-/**
- * Created by Furkan on 2019-10-16
- */
 
 inline fun <T : Any> LiveData<T>.observeWith(
     lifecycleOwner: LifecycleOwner,

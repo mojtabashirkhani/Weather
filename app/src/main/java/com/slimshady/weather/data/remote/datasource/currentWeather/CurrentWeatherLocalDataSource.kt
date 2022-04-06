@@ -5,9 +5,7 @@ import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 import com.slimshady.weather.data.remote.model.weather.CurrentWeatherResponse
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-24
- */
+
 
 class CurrentWeatherLocalDataSource @Inject constructor(private val currentWeatherDao: CurrentWeatherDao) {
 

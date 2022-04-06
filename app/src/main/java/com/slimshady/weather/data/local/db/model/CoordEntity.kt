@@ -8,9 +8,7 @@ import com.slimshady.weather.data.remote.model.weather.Coord
 import com.slimshady.weather.data.remote.model.weather.Geoloc
 import kotlinx.android.parcel.Parcelize
 
-/**
- * Created by Furkan on 2019-10-22
- */
+
 
 @Parcelize
 @Entity(tableName = "Coord")

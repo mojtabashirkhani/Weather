@@ -6,9 +6,7 @@ import com.slimshady.weather.data.remote.usecase.CurrentWeatherUseCase
 import com.slimshady.weather.data.remote.usecase.ForecastUseCase
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-24
- */
+
 
 class HomeViewModel @Inject internal constructor(
     private val forecastUseCase: ForecastUseCase,

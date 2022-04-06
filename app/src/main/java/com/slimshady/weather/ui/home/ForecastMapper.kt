@@ -5,9 +5,7 @@ import com.slimshady.weather.data.remote.model.weather.ListItem
 import com.slimshady.weather.util.Mapper
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-26
- */
+
 
 class ForecastMapper @Inject constructor() : Mapper<List<ListItem>, List<ListItem>> {
     override fun mapFrom(type: List<ListItem>): List<ListItem> {

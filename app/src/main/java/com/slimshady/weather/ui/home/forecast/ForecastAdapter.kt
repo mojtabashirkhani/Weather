@@ -12,9 +12,7 @@ import com.slimshady.weather.base.BaseAdapter
 import com.slimshady.weather.data.remote.model.weather.ListItem
 import com.slimshady.weather.databinding.ItemForecastBinding
 
-/**
- * Created by Furkan on 2019-10-25
- */
+
 
 class ForecastAdapter(private val callBack: (ListItem, View, View, View, View, View) -> Unit) : BaseAdapter<ListItem>(
     diffCallback

@@ -4,9 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.slimshady.weather.data.local.db.model.CurrentWeatherEntity
 
-/**
- * Created by Furkan on 2019-10-24
- */
 
 @Dao
 interface CurrentWeatherDao {

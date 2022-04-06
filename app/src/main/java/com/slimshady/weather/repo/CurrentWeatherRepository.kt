@@ -13,9 +13,7 @@ import io.reactivex.Single
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-/**
- * Created by Furkan on 2019-10-24
- */
+
 
 class CurrentWeatherRepository @Inject constructor(
     private val currentWeatherRemoteDataSource: CurrentWeatherRemoteDataSource,
