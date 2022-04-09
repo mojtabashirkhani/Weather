@@ -13,7 +13,8 @@
     <RelativeLayout
         android:id="@+id/rootView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
         <com.loopeer.shadow.ShadowView
             android:layout_width="wrap_content"
@@ -28,18 +29,21 @@
             app:shadowMarginBottom="40dp"
             app:shadowMarginLeft="34dp"
             app:shadowMarginRight="34dp"
-            app:shadowRadius="34dp">
+            app:shadowRadius="34dp"
+            tools:targetApi="M">
 
-            <View
-                android:layout_width="75dp"
-                android:layout_height="75dp" />
+   <View
+            android:layout_width="75dp"
+            android:layout_height="75dp" />
 
         </com.loopeer.shadow.ShadowView>
+
+
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardView"
             android:layout_width="145dp"
-            android:layout_height="190dp"
+            android:layout_height="200dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"

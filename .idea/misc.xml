@@ -35,6 +35,7 @@
         <entry key="app/src/main/res/layout/item_forecast.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_weather_hour_of_day.xml" value="0.15760869565217392" />
+        <entry key="app/src/main/res/layout/layout_dashboard_forecast.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.17916666666666667" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1895" />

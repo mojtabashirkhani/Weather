@@ -33,7 +33,7 @@
                 android:id="@+id/imageViewWeatherIcon"
                 android:layout_width="124dp"
                 android:layout_height="124dp"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="48dp"
                 app:setWeatherIcon="@{viewState.data.getCurrentWeather().icon}"
                 tools:src="@drawable/a10d_svg" />
@@ -45,11 +45,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="48dp"
-                android:layout_marginEnd="36dp"
+                android:layout_marginEnd="24dp"
                 android:fontFamily="@font/b_nazanin"
                 android:text="@{viewState.data.main.getTempString()}"
                 android:textColor="@color/white"
-                android:textSize="100sp"
+                android:textSize="90sp"
                 tools:text="25°" />
 
             <TextView
