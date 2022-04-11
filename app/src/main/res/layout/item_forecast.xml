@@ -14,9 +14,10 @@
         android:id="@+id/rootView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:padding="8dp"
+        >
 
-        <com.loopeer.shadow.ShadowView
+ <!--       <com.loopeer.shadow.ShadowView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/cardView"
@@ -36,7 +37,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp" />
 
-        </com.loopeer.shadow.ShadowView>
+        </com.loopeer.shadow.ShadowView>-->
 
 
 
@@ -50,7 +51,9 @@
             android:layout_marginBottom="40dp"
             android:backgroundTint="@{viewModel.item.getColor()}"
             android:transitionName="@{String.format(@string/cardView, viewModel.item.getDay())}"
-            app:cardCornerRadius="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            android:fitsSystemWindows="true"
             tools:backgroundTint="@android:color/holo_orange_dark"
             tools:targetApi="lollipop">
 
@@ -128,6 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textViewTemp"
+                    android:layout_marginTop="-8dp"
                     android:layout_centerHorizontal="true"
                     android:orientation="horizontal"
                     android:transitionName="@{String.format(@string/tempMaxMin, viewModel.item.getDay())}">

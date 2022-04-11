@@ -1,7 +1,9 @@
 package com.slimshady.weather.ui.main
 
+import android.app.PendingIntent.getActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -12,6 +14,7 @@ import com.google.android.material.navigation.NavigationView
 import com.slimshady.weather.R
 import com.slimshady.weather.core.Constants.NetworkService.API_KEY_MAP
 import dagger.android.support.DaggerAppCompatActivity
+
 
 class MainActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,6 +32,7 @@ class MainActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
 
 
 
+
         drawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -42,7 +46,9 @@ class MainActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+        navController.addOnDestinationChangedListener {
+                controller, destination, arguments ->
+
             if (destination.id == R.id.nav_splash) {
                 supportActionBar?.hide()
             } else {
