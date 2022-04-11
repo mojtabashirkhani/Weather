@@ -1,18 +1,14 @@
 package com.slimshady.weather.ui.main
 
-import android.app.PendingIntent.getActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
-import com.google.android.libraries.places.api.Places
 import com.google.android.material.navigation.NavigationView
 import com.slimshady.weather.R
-import com.slimshady.weather.core.Constants.NetworkService.API_KEY_MAP
 import dagger.android.support.DaggerAppCompatActivity
 
 
@@ -22,7 +18,6 @@ class MainActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationItemS
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Places.initialize(applicationContext, API_KEY_MAP)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

@@ -1,15 +1,9 @@
 package com.slimshady.weather.ui.search
 
 import android.annotation.SuppressLint
-import android.os.Build
-import android.view.Gravity
-import android.view.View
-import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.slimshady.weather.R
 import com.slimshady.weather.base.BaseFragment
@@ -18,8 +12,6 @@ import com.slimshady.weather.data.remote.usecase.SearchUseCase
 import com.slimshady.weather.databinding.FragmentSearchBinding
 import com.slimshady.weather.ui.search.result.SearchResultAdapter
 import com.slimshady.weather.util.extensions.isNetworkAvailable
-import kotlinx.android.synthetic.main.item_search.*
-import java.util.stream.Collectors
 
 class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>(
     R.layout.fragment_search,

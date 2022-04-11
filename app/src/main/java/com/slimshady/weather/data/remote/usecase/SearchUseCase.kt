@@ -2,7 +2,6 @@ package com.slimshady.weather.data.remote.usecase
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
-import com.google.android.gms.maps.MapView
 import com.slimshady.weather.data.local.db.model.MapEntity
 import com.slimshady.weather.repo.MapRepository
 import com.slimshady.weather.ui.search.SearchViewState
