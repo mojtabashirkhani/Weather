@@ -70,6 +70,35 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_search" />
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@android:color/holo_red_light"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="16dp"
+            app:setErrorView="@{viewState}"
+            app:strokeColor="@android:color/holo_red_dark"
+            app:strokeWidth="2dp"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:drawableEndCompat="@android:drawable/stat_notify_error"
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="12dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:setErrorText="@{viewState}"
+                tools:text="Status code : 500 Internal server error!" />
+
+        </com.google.android.material.card.MaterialCardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

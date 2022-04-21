@@ -1,5 +1,6 @@
 package com.slimshady.weather.repo
 
+import android.annotation.SuppressLint
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
@@ -13,6 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
+@SuppressLint("WrongThread")
 abstract class NetworkBoundResource<ResultType, RequestType>
 @MainThread internal constructor() {
     private val result = MediatorLiveData<Resource<ResultType>>()
@@ -28,10 +30,15 @@ abstract class NetworkBoundResource<ResultType, RequestType>
         dbSource = loadFromDb()
         result.addSource(dbSource) { data ->
             result.removeSource(dbSource)
-            if (shouldFetch(data)) {
-                fetchFromNetwork(dbSource)
-            } else {
-                result.addSource(dbSource) { newData -> result.setValue(Resource.success(newData)) }
+            when {
+                shouldFetch(data) -> {
+                    fetchFromNetwork(dbSource)
+                }
+                data == null -> {
+                    fetchFromNetwork(dbSource)                }
+                else -> {
+                    result.addSource(dbSource) { newData -> result.setValue(Resource.success(newData)) }
+                }
             }
         }
     }
