@@ -7,8 +7,11 @@ import com.slimshady.weather.data.local.prefs.PreferencesHelper
 import com.slimshady.weather.di.qualifier.PreferenceInfo
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@InstallIn(SingletonComponent::class)
 @Module
 class SharedPreferencesModule {
 

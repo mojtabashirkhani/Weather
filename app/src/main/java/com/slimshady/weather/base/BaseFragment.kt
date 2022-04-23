@@ -12,19 +12,14 @@ import androidx.annotation.NonNull
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.databinding.ViewDataBinding
 import androidx.databinding.library.baseAdapters.BR
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
-import dagger.android.support.AndroidSupportInjection
-import dagger.android.support.DaggerFragment
-import javax.inject.Inject
 
+abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val layout: Int, viewModelClass: Class<V>) : Fragment() {
 
-abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val layout: Int, viewModelClass: Class<V>) : DaggerFragment() {
-
-    @Inject
-    internal lateinit var viewModelProviderFactory: ViewModelProvider.Factory
 
     lateinit var mViewDataBinding: T
     private lateinit var permissionCallback: (Array<BasePermissionModel>) -> Unit
@@ -33,11 +28,10 @@ abstract class BaseFragment<V: ViewModel, T: ViewDataBinding>(@LayoutRes val lay
     abstract fun initViews()
 
     private val mViewModel by lazy {
-       viewModelProviderFactory.let { ViewModelProvider(this, it).get(viewModelClass) }
+        ViewModelProvider(this).get(viewModelClass)
     }
 
     override fun onAttach(context: Context) {
-        AndroidSupportInjection.inject(this)
 
         super.onAttach(context)
 //        mViewModel = getViewModel()

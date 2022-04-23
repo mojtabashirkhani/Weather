@@ -1,15 +1,14 @@
 package com.slimshady.weather.core
 
 
+import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
-import com.slimshady.weather.di.component.DaggerCoreComponent
 import com.squareup.picasso.Picasso
-import dagger.android.AndroidInjector
-import dagger.android.support.DaggerApplication
+import dagger.hilt.android.HiltAndroidApp
 
-
-class App : DaggerApplication() {
+@HiltAndroidApp
+class App : Application() {
 
     override fun onCreate() {
         super.onCreate();
@@ -17,13 +16,12 @@ class App : DaggerApplication() {
 
     }
 
-
-    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+ /*   override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
         return DaggerCoreComponent
             .builder()
             .application(this)
             .build()
-    }
+    }*/
 
     override fun attachBaseContext(context: Context) {
         super.attachBaseContext(context)

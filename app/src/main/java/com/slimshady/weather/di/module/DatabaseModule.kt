@@ -9,8 +9,11 @@ import com.slimshady.weather.data.local.db.dao.ForecastDao
 import com.slimshady.weather.data.local.db.dao.MapDao
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@InstallIn(SingletonComponent::class)
 @Module
 class DatabaseModule {
 

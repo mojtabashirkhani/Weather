@@ -8,6 +8,8 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
+apply plugin: "dagger.hilt.android.plugin"
+
 
 android {
 
@@ -132,11 +134,11 @@ dependencies {
     implementation 'android.arch.work:work-runtime:1.0.1'
 
 
-    implementation "com.google.dagger:dagger-android:$dagger"
+/*    implementation "com.google.dagger:dagger-android:$dagger"
     implementation "com.google.dagger:dagger-android-support:$dagger"
     // if you use the support libraries
     kapt "com.google.dagger:dagger-android-processor:$dagger"
-    kapt "com.google.dagger:dagger-compiler:$dagger"
+    kapt "com.google.dagger:dagger-compiler:$dagger"*/
 
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
@@ -206,6 +208,10 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.3'
 
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
 
 
     testImplementation 'junit:junit:4.13'

@@ -12,7 +12,9 @@ import com.slimshady.weather.data.remote.usecase.SearchUseCase
 import com.slimshady.weather.databinding.FragmentSearchBinding
 import com.slimshady.weather.ui.search.result.SearchResultAdapter
 import com.slimshady.weather.util.extensions.isNetworkAvailable
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>(
     R.layout.fragment_search,
     SearchViewModel::class.java

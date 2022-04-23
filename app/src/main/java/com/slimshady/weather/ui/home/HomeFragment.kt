@@ -17,8 +17,9 @@ import com.slimshady.weather.databinding.FragmentHomeBinding
 import com.slimshady.weather.ui.home.forecast.ForecastAdapter
 import com.slimshady.weather.util.extensions.isNetworkAvailable
 import com.slimshady.weather.util.extensions.observeWith
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     R.layout.fragment_home,
     HomeViewModel::class.java

@@ -1,12 +1,11 @@
 package com.slimshady.weather.base
 
-import dagger.android.support.DaggerAppCompatActivity
 import android.os.Bundle
 import androidx.annotation.Nullable
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 
-
-abstract class BaseActivity<T : ViewModel> : DaggerAppCompatActivity() {
+abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
 
     private var viewModel: T? = null
 

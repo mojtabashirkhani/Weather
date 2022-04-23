@@ -10,8 +10,11 @@ import com.slimshady.weather.data.remote.model.weather.ListItem
 import com.slimshady.weather.databinding.FragmentWeatherDetailBinding
 import com.slimshady.weather.ui.weather_detail.weatherHourOfDay.WeatherHourOfDayAdapter
 import com.slimshady.weather.util.extensions.observeWith
+import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.disposables.CompositeDisposable
 
+
+@AndroidEntryPoint
 class WeatherDetailFragment : BaseFragment<WeatherDetailViewModel, FragmentWeatherDetailBinding>(R.layout.fragment_weather_detail, WeatherDetailViewModel::class.java) {
 
     private val weatherDetailFragmentArgs: WeatherDetailFragmentArgs by navArgs()

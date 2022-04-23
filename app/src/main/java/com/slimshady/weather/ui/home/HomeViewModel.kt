@@ -1,13 +1,15 @@
 package com.slimshady.weather.ui.home
 
 import androidx.lifecycle.*
+import com.slimshady.weather.base.BaseViewModel
 
 import com.slimshady.weather.data.remote.usecase.CurrentWeatherUseCase
 import com.slimshady.weather.data.remote.usecase.ForecastUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 
-
+@HiltViewModel
 class HomeViewModel @Inject internal constructor(
     private val forecastUseCase: ForecastUseCase,
     private val currentWeatherUseCase: CurrentWeatherUseCase) : ViewModel() {

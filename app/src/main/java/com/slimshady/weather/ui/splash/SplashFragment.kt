@@ -13,8 +13,10 @@ import com.slimshady.weather.util.extensions.hide
 import com.slimshady.weather.util.extensions.show
 import io.reactivex.disposables.CompositeDisposable
 import com.slimshady.weather.R
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBinding>(R.layout.fragment_splash, SplashFragmentViewModel::class.java) {
 
     var disposable = CompositeDisposable()
