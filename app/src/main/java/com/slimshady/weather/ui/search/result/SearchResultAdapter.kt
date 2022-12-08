@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import com.slimshady.weather.base.BaseAdapter
-import com.slimshady.weather.data.local.db.model.MapEntity
 import com.slimshady.weather.data.remote.model.places_response.Value
 import com.slimshady.weather.databinding.ItemSearchBinding
 
