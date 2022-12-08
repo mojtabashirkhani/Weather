@@ -26,20 +26,17 @@ class DatabaseModule {
             .build()
     }
 
-    @Singleton
     @Provides
     fun provideForecastDao(db: AppDatabase): ForecastDao {
         return db.forecastDao()
     }
 
-    @Singleton
     @Provides
     fun provideCurrentWeatherDao(db: AppDatabase): CurrentWeatherDao {
         return db.currentWeatherDao()
     }
 
 
-    @Singleton
     @Provides
     fun provideMapDao(db: AppDatabase): MapDao {
         return db.mapDao()
