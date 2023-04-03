@@ -78,11 +78,11 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
 
                 mViewDataBinding.imageViewMainCloud.fadeIn(500L),
                 mViewDataBinding.buttonExplore.fadeIn(1000L)
-            ).doOnTerminate {
+            )/*.doOnTerminate {
                 findNavController().graph.startDestination = R.id.nav_home // Little bit tricky solution :)
                 if (navigateToDashboard)
                     endSplashAnimation(navigateToDashboard)
-            }
+            }*/
                 .subscribe()
         )
     }
@@ -115,13 +115,13 @@ class SplashFragment : BaseFragment<SplashFragmentViewModel, FragmentSplashBindi
                     duration = 750L
                 )
             )
-                .doOnTerminate {
+                /*.doOnTerminate {
                     findNavController().graph.startDestination = R.id.nav_home // Little bit tricky solution :)
                     if (navigateToDashboard)
                         navigate(R.id.action_splashFragment_to_homeFragment)
                     else
                         navigate(R.id.action_splashFragment_to_searchFragment)
-                }
+                }*/
                 .subscribe()
 
         )
