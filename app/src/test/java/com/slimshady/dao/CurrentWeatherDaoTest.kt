@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
+import com.slimshady.util.blockingObserve
 import com.slimshady.util.generateCurrentWeatherEntity
 import com.slimshady.util.getOrAwaitValue
 import com.slimshady.weather.data.local.db.AppDatabase
@@ -70,7 +71,7 @@ class CurrentWeatherDaoTest {
         currentWeatherDao.insertCurrentWeather(generateCurrentWeatherEntity("Tehran", 1))
 
         val entity = currentWeatherDao.getCurrentWeather().getOrAwaitValue()
-        Truth.assertThat(entity.name).isEqualTo("Tehran")
+        Truth.assertThat(entity.id).isEqualTo(1)
     }
 
     @Test
