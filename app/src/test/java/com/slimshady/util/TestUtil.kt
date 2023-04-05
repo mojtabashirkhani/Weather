@@ -44,7 +44,7 @@ fun <T> LiveData<T>.getOrAwaitValue(
 }
 
 // Data Generators
-/*fun createSampleForecastResponse(id: Int, cityName: String): ForecastEntity {
+fun createSampleForecastResponse(id: Int): ForecastEntity {
     val weatherItem = WeatherItem("12d", "clouds", "cloud & sun", 1)
     val weather = listOf(weatherItem)
     val listItem = ListItem(
@@ -62,13 +62,13 @@ fun <T> LiveData<T>.getOrAwaitValue(
         Clouds(1), Sys("a"), Wind(12.0, 12.0)
     )
     val list = listOf(listItem)
-    return ForecastEntity(id, CityEntity("Turkey", CoordEntity(34.0, 30.0), cityName, 34), list)
-}*/
+    return ForecastEntity(id, list)
+}
 
-/*fun createSampleForecastWithCoord(id: Int, cityName: String, lat: Double, lon: Double): ForecastEntity {
+fun createSampleForecastWithCoord(id: Int): ForecastEntity {
     val list = emptyList<ListItem>()
-    return ForecastEntity(id, CityEntity("Turkey", CoordEntity(lon, lat), cityName, 34), list)
-}*/
+    return ForecastEntity(id, list)
+}
 
 /*fun generateCitiesForSearchEntity(id: String, name: String): CitiesForSearchEntity {
     return CitiesForSearchEntity("Clear", "Turkey", CoordEntity(34.0, 30.0), name, "Beyoglu", 1, id)
