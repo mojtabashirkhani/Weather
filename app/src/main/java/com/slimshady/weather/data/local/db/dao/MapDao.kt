@@ -1,10 +1,8 @@
 package com.slimshady.weather.data.local.db.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
+import com.slimshady.weather.data.local.db.model.ForecastEntity
 import com.slimshady.weather.data.local.db.model.MapEntity
 
 @Dao
@@ -18,4 +16,16 @@ interface MapDao {
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addSearchItem(mapEntity: MapEntity)
+
+    @Query("Select count(*) from SearchMapIR")
+    fun getCount(): Int
+
+    @Update
+    fun updateSearchMapResult(mapEntity: MapEntity)
+
+    @Delete
+    fun deleteSearchMapResult(mapEntity: MapEntity)
+
+    @Query("DELETE FROM SearchMapIR")
+    fun deleteAll()
 }
